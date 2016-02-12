@@ -6,3 +6,8 @@ All notable changes to this project will be documented in this file.
 - This CHANGELOG file to serve as a file to record all changes
 - Initiated github organization and added members
 - Edited Readme.md file
+
+## 0.0.2 - 2016-02-12 - 3:18 PM
+### Added
+- Temporary CodeIgniter Framework
+- May have some problems
