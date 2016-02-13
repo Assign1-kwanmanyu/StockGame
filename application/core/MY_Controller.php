@@ -9,7 +9,7 @@
  * @copyright           2010-2013, James L. Parry
  * ------------------------------------------------------------------------
  */
-class Application extends CI_Controller {
+class MY_Controller extends CI_Controller {
 
 	protected $data = array();	  // parameters for view components
 	protected $id;				  // identifier for our content
@@ -33,7 +33,6 @@ class Application extends CI_Controller {
 	 */
 	function render()
 	{
-		$this->data['menubar'] = $this->parser->parse('_menubar', $this->config->item('menu_choices'), true);
 		$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
 
 		// finally, build the browser page!
