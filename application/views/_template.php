@@ -13,7 +13,7 @@ if (!defined('APPPATH'))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Assignment 1</title>
+        <title>{pagetitle}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
@@ -57,16 +57,7 @@ if (!defined('APPPATH'))
 
             <!-- Page Content -->
             <div id="page-content-wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1>Simple Sidebar</h1>
-                            <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                            <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-                        </div>
-                    </div>
-                </div>
+                {content}
             </div>
             <!-- /#page-content-wrapper -->
 
