@@ -11,3 +11,8 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Temporary CodeIgniter Framework
 - May have some problems
+
+## 0.0.3 - 2016-02-12 - 6:50 PM
+### Added
+- Redid some structuring
+- initialize db
