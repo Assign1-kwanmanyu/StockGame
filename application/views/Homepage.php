@@ -2,3 +2,11 @@
 <a href="/stockhistory">Stock History Page</a>
 </br>
 <a href="/player">Player Portfolio</a>
+
+{PlayerInfo}
+	{Player}
+	{Cash}
+{/PlayerInfo}
+
+</br>
+{StockInfo}

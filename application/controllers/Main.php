@@ -22,66 +22,18 @@ class Main extends MY_Controller {
 	{
 		
 		$this->data['pagebody']='Homepage';
+		$this->data['pagetitle']='Homepage';
+		$this->data['PlayerInfo']=$this->StockModel->getPlayerInfo();
+		$ad["StockInfo"]=$this->StockModel->getStockInfo();
+		//Parse replaces templating with data
+		$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
+		//$this->load->view('Homepage', $d2);
 		//$this->getPlayerInfo();
-
-
-		$this->getPlayerInfo();
-		$this->getStockInfo();
+		//$this->getStockInfo();
 		//$this->getStockInfo();
 		$this->render();	
 	}
 
-	
-	//
-	public function getPlayerInfo(){
-		$this->db->select('*');
-		$this->db->from('players');
-		$query=$this->db->get();
-		echo "<h2>Player Information </h2>";
-		echo "<table>";
-		foreach ($query->result_array() as $row)
-		{
-			echo "<tr>";
-			echo "<td>";
-  	 		echo $row['Player'];
-  	 		echo "</td>";
-  	 		echo "<td>";
-   			echo $row['Cash'];
-   			echo "</td>";
-   			echo "</tr>";
-
-		}
-		echo "</table>";
-
-
-	}
-	public function getStockInfo(){
-		$this->db->select('*');
-		$this->db->from('stocks');
-		$query=$this->db->get();
-		echo "<h2>Stock information</h2>";
-		echo "<table>";
-		foreach ($query->result_array() as $row)
-		{
-			echo "<tr>";
-			echo "<td>";
-  	 		echo $row['Code'];
-  	 		echo "</td>";
-  	 		echo "<td>";
-   			echo $row['Name'];
-   			echo "</td>";
-   			echo "<td>";
-   			echo $row['Category'];
-   			echo "</td>";
-   			echo "<td>";
-   			echo $row['Value'];
-   			echo "</td>";
-   			echo "</tr>";
-		}
-		echo "</table>";
-
-	}
-	
 
 	
 
