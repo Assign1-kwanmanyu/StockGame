@@ -2,3 +2,5 @@
 <a href="/">Home Page</a>
 </br>
 <a href="/player">Player Portfolio</a>
+
+{StockInfo}
