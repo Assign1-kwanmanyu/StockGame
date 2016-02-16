@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends MY_Controller {
+class Stock extends MY_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,18 +20,9 @@ class Welcome extends MY_Controller {
 	 */
 	public function index()
 	{
-		$this->data['pagebody']='testing';
+		$this->data['pagebody']='StockHistory';
 		$this->render();
 	}
-	public function main()
-	{
-		$this->data['pagebody']='alvin';
-		$this->render();
-	}
-	public function foo()
-	{
-		$this->data['pagebody']='Welcome';
-		$this->render();
-	}
+
 
 }
