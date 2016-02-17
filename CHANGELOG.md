@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.4 - 2016-02-16 - 9:50 PM
+### Added
+- itnegrated html/css into template
+
 ## 0.0.3 - 2016-02-12 - 6:50 PM
 ### Added
 - Redid some structuring
