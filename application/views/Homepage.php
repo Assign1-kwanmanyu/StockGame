@@ -280,7 +280,7 @@
                             </div>
                         </div>
                        <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu </a> -->
-                       <!--<h1>Homepage</h1>
+                      <!--<h1>Homepage</h1>
 <a href="/stockhistory">Stock History Page</a>
 </br>
 <a href="/player">Player Portfolio</a>
