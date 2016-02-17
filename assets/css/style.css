@@ -6,6 +6,13 @@ body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
 /* Text Styles */
 #name-header {
     margin-left: -5%;
@@ -22,6 +29,43 @@ h2 {
     font-size: 100%;
 }
 
+/* */
+.padding-top-5 {
+   padding-top: 5px;
+}
+
+.span-stock-dash-subtitle {
+    font-size: 0.8em;
+}
+.stock-up {
+   background: #0F5425;
+}
+
+.stock-up-2 {
+   background: #167234;
+}
+
+.stock-down {
+    background: #b54200;
+}
+
+.stock-down-2 {
+    background: #751100;
+}
+
+.div-stock-dash-wrapper h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: white;
+}
+
+.div-stock-dash-wrapper h2 {
+    opacity: 0.5;
+}
+.div-stock-dash-wrapper .norm {
+    margin-left: 5px;
+    background: #1E2124;
+}
 /* */
 
 .div-friend-list {
@@ -72,7 +116,8 @@ h2 {
 
 /* list styles */
 
-#wrapper {
+.wrapper {
+    width: 100%;
     min-height: 100%;
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -81,7 +126,7 @@ h2 {
     transition: all 0.5s ease;
 }
 
-#wrapper.toggled {
+.wrapper.toggled {
     padding-left: 250px;
 }
 
@@ -168,7 +213,7 @@ h2 {
 }
 
 @media(min-width:768px) {
-    #wrapper {
+    .wrapper {
         padding-left: 175px;
     }
 
