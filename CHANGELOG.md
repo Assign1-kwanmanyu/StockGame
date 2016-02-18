@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.9 - 2016-02-18 - 1:48 PM
+### Added
+- Moved friends panel to Homepage view.
+
 ## 0.0.8 - 2016-02-18 - 12:08 AM
 ### Added
 - Homepage displays database queries on separate rows.

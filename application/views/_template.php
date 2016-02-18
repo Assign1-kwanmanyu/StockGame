@@ -112,46 +112,7 @@ if (!defined('APPPATH'))
         <div id="stocks-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8" style = "margin-right: 15px;">
-                        {content}
-                    </div>
-                        <div class="div-friend-list col-md-4" style = "background: #2E3136;">
-                        <h2>Online - 4</h2>
-                        <div class = "row">
-                            <div class = "col-md-12">
-                                <ul class="ul-friend-list list-unstyled">
-                                  <li class=""><img src = "assets/img/friend1.png">Thomas Yu
-                                      <ul class = "ul-friend-info list-unstyled">
-                                            <li><img src = "assets/img/icon-cash.png">$12321.33</li>
-                                            <li><img src = "assets/img/icon-stock-muney.png">$6969.12</li>
-                                        </ul>
-                                  </li>
-                                  <li class="">
-                                            <img src = "assets/img/friend3.png">Krystle Bulalakaw
-                                        <ul class = "ul-friend-info list-unstyled">
-                                            <li><img src = "assets/img/icon-cash.png">$431.69</li>
-                                            <li><img src = "assets/img/icon-stock-muney.png">$2914.69</li>
-                                        </ul> 
-                                  </li> 
-                                  <li class="">
-                                    <img src = "assets/img/friend2.png">Oscar Kwan
-                                        <ul class = "ul-friend-info list-unstyled">
-                                            <li><img src = "assets/img/icon-cash.png">$7615.06</li>
-                                            <li><img src = "assets/img/icon-stock-muney.png">$61.41</li>
-                                        </ul>
-                                    </li>
-                                <li class="">
-                                            <img src = "assets/img/friend3.png">Spenser Lee
-                                        <ul class = "ul-friend-info list-unstyled">
-                                            <li><img src = "assets/img/icon-cash.png">$431.69</li>
-                                            <li><img src = "assets/img/icon-stock-muney.png">$2914.69</li>
-                                        </ul> 
-                                  </li> 
-                                </ul>
-                            </div>
-                        </div>
-                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu </a> -->
-                    </div>
+                    {content}
                 </div>
             </div>
             <!-- /#stocks-wrapper -->

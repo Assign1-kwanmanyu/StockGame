@@ -20,7 +20,6 @@ class Main extends MY_Controller {
 	 */
 	public function index()
 	{
-		
 		$this->data['pagebody']='Homepage';
 		$this->data['pagetitle']='Homepage';
 		$this->data['PlayerInfo']=$this->StockModel->getPlayerInfo();
