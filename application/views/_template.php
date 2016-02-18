@@ -29,6 +29,10 @@ if (!defined('APPPATH'))
         <!-- Custom CSS -->
         <link href="assets/css/style.css" rel="stylesheet">
 
+        <link href="assets/css/modal.css" rel="stylesheet">
+
+        <script src="assets/js/modernizr.custom.js"></script>
+
         <!-- Fonts -- >
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic,300italic,600italic,700italic,800italic,800' rel='stylesheet' type='text/css'>
 
@@ -43,6 +47,27 @@ if (!defined('APPPATH'))
     </head>
 
     <body>
+
+    <!-- All modals added here for the demo. You would of course just have one, dynamically created -->
+    <div class="md-modal md-effect-18" id="modal-1">
+        <div class="md-content">
+            <h3>Login Credientials</h3>
+            <div>
+                <p>Login to your account! Don't have an account? Register here.</p>
+                <form>
+                    <div class="form-group">
+                      <label for="usr">Name:</label>
+                      <input type="text" class="form-control" id="usr">
+                    </div>
+                    <div class="form-group">
+                      <label for="pwd">Password:</label>
+                      <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <button class="md-close">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <div id="container" class = "wrapper">
 
@@ -76,6 +101,11 @@ if (!defined('APPPATH'))
                 </li>
             </ul>
         </div>
+        <ul class = "sidebar-login">
+            <li>
+                <button class="md-trigger md-setperspective" data-modal="modal-1">Login</button>
+            </li>
+        </ul>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -134,6 +164,9 @@ if (!defined('APPPATH'))
 
         <!-- Bootstrap Core JavaScript -->
         <script src="assets/js/bootstrap.min.js"></script>
+
+        <script src="assets/js/classie.js"></script>
+        <script src="assets/js/modalEffects.js"></script>
 
         <!-- Menu Toggle Script -->
         <script>
