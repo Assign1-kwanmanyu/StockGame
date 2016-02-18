@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.9 - 2016-02-18 - 15:8 PM
+### Added
+- Added stockhistory html
+- more styling
+
 ## 0.0.8 - 2016-02-18 - 12:08 AM
 ### Added
 - Homepage displays database queries on separate rows.
