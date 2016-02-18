@@ -11,9 +11,9 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Homepage now displays actual queries from database.  Need to get it to display on multiple rows.
 
-## 0.0.6 - 2016-02-16 - 9:50 PM
+## 0.0.6 - 2016-02-17 - 2:50 PM
 ### Added
-- integrated html/css into template
+- Added login UI elements
 
 ## 0.0.5 - 2016-02-16 - 1:41 pm
 ### Added
