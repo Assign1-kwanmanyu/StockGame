@@ -60,6 +60,14 @@ class StockModel extends CI_Model {
 		*/
 
 	}
+
+	public function getStockInfoRange($count, $from){
+		$this->db->select('*');
+		$this->db->from('stocks');
+		$this->db->limit($count,$from);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
 	
 
 	

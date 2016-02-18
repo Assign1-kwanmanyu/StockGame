@@ -24,15 +24,37 @@ class Main extends MY_Controller {
 		$this->data['pagebody']='Homepage';
 		$this->data['pagetitle']='Homepage';
 		$this->data['PlayerInfo']=$this->StockModel->getPlayerInfo();
-		$ad["StockInfo"]=$this->StockModel->getStockInfo();
+		$this->data['StockInfo']=$this->StockModel->getStockInfo();
+
+
+		//get the total number of queries
+
+		//divide the total number by 4 to get the number of rows
+
+		//for loop that goes through and calls getStockInfoRange for each row
+		//eg: getStockInfoRange(4,0); getStockInfoRange(4,4); getStockInfoRange(4,8);
+
+		//put those calls into each individual variable
+
+		//pass the number of data variables to the view
+		//pass all the data variables to the view
+
+		//then in the view, access the database depending on the number passed in
+
+
+
+
+		$this->data['StockInfo2']=$this->StockModel->getStockInfoRange(4,1);
+		////$ad["StockInfo"]=$this->StockModel->getStockInfo();
 		//Parse replaces templating with data
-		$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
+		////$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
 		//$this->load->view('Homepage', $d2);
 		//$this->getPlayerInfo();
 		//$this->getStockInfo();
 		//$this->getStockInfo();
 		$this->render();	
 	}
+
 
 
 	
