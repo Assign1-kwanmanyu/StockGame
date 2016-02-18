@@ -5,6 +5,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
+    background: #36393E; 
 }
 .row {
   display: -webkit-box;
@@ -117,7 +118,6 @@ h2 {
 /* list styles */
 
 .wrapper {
-    width: 100%;
     min-height: 100%;
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -130,6 +130,12 @@ h2 {
     padding-left: 250px;
 }
 
+.sidebar-login {
+    position: absolute;
+    z-index: 2500;
+    left: -25px;
+    bottom: 0px;
+}
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
@@ -150,12 +156,13 @@ h2 {
 }
 
 #stocks-wrapper {
-    margin: 0;
-    height: 100%;
-    position: absolute;
-    padding: 15px;
+/*    margin: 0;
+    width: 100%;
+    padding: 15px; */
+        min-height: 100%;
+
     color: white;
-    background: #36393E;
+    background: #36393E; 
 }
 
 #wrapper.toggled #stocks-wrapper {
