@@ -1,9 +1,28 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## 0.0.4 - 2016-02-16 - 9:50 PM
+## 0.0.8 - 2016-02-18 - 12:08 AM
+### Added
+- Homepage displays database queries on separate rows.
+- Added several helper functions to Main controller.
+- Added several helper functions to StockModel model.
+
+## 0.0.7 - 2016-02-17 - 8:15 PM
+### Added
+- Homepage now displays actual queries from database.  Need to get it to display on multiple rows.
+
+## 0.0.6 - 2016-02-16 - 9:50 PM
 ### Added
 - integrated html/css into template
+
+## 0.0.5 - 2016-02-16 - 1:41 pm
+### Added
+- Model implemented. Edited views and controllers 
+
+## 0.0.4 - 2016-02-16 - 1:35 am
+### Added
+- Controllers and View structure properly setup for homepage, stock history page, and player page. 
+- Database queries implemented.
 
 ## 0.0.3 - 2016-02-12 - 6:50 PM
 ### Added
@@ -20,11 +39,7 @@ All notable changes to this project will be documented in this file.
 - This CHANGELOG file to serve as a file to record all changes
 - Initiated github organization and added members
 - Edited Readme.md file
-## 0.0.2 - 2016-02-16 - 1:35 am
-### Added
-- Controllers and View structure properly setup for homepage, stock history page, and player page. 
-- Database queries implemented.
 
-## 0.0.3 - 2016-02-16 - 1:41 pm
-### Added
-- Model implemented. Edited views and controllers 
+
+
+
