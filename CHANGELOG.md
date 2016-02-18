@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.10 - 2016-02-18 - 2:00 PM
+### Added
+- Refactored player functions from StockModel to PlayerModel.
+
 ## 0.0.9 - 2016-02-18 - 1:48 PM
 ### Added
 - Moved friends panel to Homepage view.

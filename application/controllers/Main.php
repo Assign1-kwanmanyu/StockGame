@@ -22,7 +22,7 @@ class Main extends MY_Controller {
 	{
 		$this->data['pagebody']='Homepage';
 		$this->data['pagetitle']='Homepage';
-		$this->data['PlayerInfo']=$this->StockModel->getPlayerInfo();
+		$this->data['PlayerInfo']=$this->PlayerModel->getPlayerInfo();
 		//$this->data['StockInfo']=$this->StockModel->getStockInfo();
 
 		$this->data['stockInfoArray']=$this->getStockArray();

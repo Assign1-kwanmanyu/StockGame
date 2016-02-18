@@ -3,12 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class StockModel extends CI_Model {
 
-	public function getPlayerInfo(){
-		$this->db->select('*');
-		$this->db->from('players');
-		$query=$this->db->get();
-		return $query->result_array();
-	}
 	public function getStockInfo(){
 		$this->db->select('*');
 		$this->db->from('stocks');
