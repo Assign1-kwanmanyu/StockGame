@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.6 - 2016-02-17 - 2:50 PM
+### Added
+- Added login UI elements
+
+## 0.0.5 - 2016-02-17 - 12:50 AM
+### Added
+- finished up dashboard ui
+
 ## 0.0.4 - 2016-02-16 - 9:50 PM
 ### Added
 - integrated html/css into template
