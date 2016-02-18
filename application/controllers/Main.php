@@ -24,27 +24,10 @@ class Main extends MY_Controller {
 		$this->data['pagebody']='Homepage';
 		$this->data['pagetitle']='Homepage';
 		$this->data['PlayerInfo']=$this->StockModel->getPlayerInfo();
-		$this->data['StockInfo']=$this->StockModel->getStockInfo();
+		//$this->data['StockInfo']=$this->StockModel->getStockInfo();
 
+		$this->data['stockInfoArray']=$this->getStockArray();
 
-		//get the total number of queries
-
-		//divide the total number by 4 to get the number of rows
-
-		//for loop that goes through and calls getStockInfoRange for each row
-		//eg: getStockInfoRange(4,0); getStockInfoRange(4,4); getStockInfoRange(4,8);
-
-		//put those calls into each individual variable
-
-		//pass the number of data variables to the view
-		//pass all the data variables to the view
-
-		//then in the view, access the database depending on the number passed in
-
-
-
-
-		$this->data['StockInfo2']=$this->StockModel->getStockInfoRange(4,1);
 		////$ad["StockInfo"]=$this->StockModel->getStockInfo();
 		//Parse replaces templating with data
 		////$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
@@ -55,11 +38,29 @@ class Main extends MY_Controller {
 		$this->render();	
 	}
 
+	public function getStockArray(){
+		//get the total number of queries
+		$numQueries = $this->StockModel->getTotalStockNum();
 
+		//divide the total number by 4 to get the number of rows
+		$numRows = (int)($numQueries / 4);
 
-	
+		if($numQueries % 4 > 0){
+			$numRows++;
+		}
 
+		//initialize the array to store all the data
+		$rowData = [];
 
+		//for loop that goes through and calls getStockInfoRange for each row
+		//eg: getStockInfoRange(4,0); getStockInfoRange(4,4); getStockInfoRange(4,8);
+		for ($x = 0; $x < $numRows; $x++){
+			//put query result into the array
+			$rowData[$x] = $this->StockModel->getStockInfoRange(4, $x*4);
+		}
+
+		return $rowData;
+	}
 }
 
 

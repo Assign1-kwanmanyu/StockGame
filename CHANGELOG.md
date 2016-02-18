@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.8 - 2016-02-18 - 12:08 AM
+### Added
+- Homepage displays database queries on separate rows.
+- Added several helper functions to Main controller.
+- Added several helper functions to StockModel model.
+
 ## 0.0.7 - 2016-02-17 - 8:15 PM
 ### Added
 - Homepage now displays actual queries from database.  Need to get it to display on multiple rows.
