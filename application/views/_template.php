@@ -33,6 +33,12 @@ if (!defined('APPPATH'))
 
         <script src="assets/js/modernizr.custom.js"></script>
 
+        <!-- Morris Charts CSS -->
+        <link href="assets/css/plugins/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
         <!-- Fonts -- >
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic,300italic,600italic,700italic,800italic,800' rel='stylesheet' type='text/css'>
 
@@ -70,7 +76,6 @@ if (!defined('APPPATH'))
     </div>
 
     <div id="container" class = "wrapper">
-
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -106,19 +111,9 @@ if (!defined('APPPATH'))
                 <button class="md-trigger md-setperspective" data-modal="modal-1">Login</button>
             </li>
         </ul>
-        <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="stocks-wrapper">
-            <div class="container">
-                <div class="row">
-                    {content}
-                </div>
-            </div>
-            <!-- /#stocks-wrapper -->
-
-        </div>
-        <!-- /#wrapper -->
+        {content}
 
         <!-- jQuery -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
@@ -128,6 +123,11 @@ if (!defined('APPPATH'))
 
         <script src="assets/js/classie.js"></script>
         <script src="assets/js/modalEffects.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="assets/js/plugins/morris/raphael.min.js"></script>
+        <script src="assets/js/plugins/morris/morris.min.js"></script>
+        <script src="assets/js/plugins/morris/morris-data.js"></script>
 
         <!-- Menu Toggle Script -->
         <script>
