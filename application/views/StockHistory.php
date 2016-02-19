@@ -1,4 +1,16 @@
-<?php print_r($MostRecentStock) ?>
+<?php
+//    // Grabs the selected stock from the dashboard
+//    if(empty($_GET['selectedStock'])){
+//        $selectedStock = $SelectedStockTransactions[0]['Stock'];
+//        print_r("if");
+//    } else {
+//        $selectedStock = $_GET['selectedStock'];
+//        print_r("else");
+//    }
+//    print_r($selectedStock);
+//
+//?>
+
 
 <div id="page-wrapper">
 
@@ -7,7 +19,8 @@
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h2>Stock <span class = "font-weight-700">History</span> | <span>GOLD</span></h2>
+                <h2>Stock <span class = "font-weight-700">History</span> |
+                    <span>Gold</span></h2>
             </div>
         </div>
         <!-- /.row -->
@@ -121,7 +134,7 @@
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Stock Transacation</h3>
+                        <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Stock Transaction</h3>
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">
@@ -136,62 +149,15 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {SelectedStockTransactions}
                                 <tr>
-                                    <td>10/21/2013</td>
-                                    <td>Alvin Man</td>
-                                    <td>3:29 PM</td>
-                                    <td>$321.33</td>
-                                    <td>a lot</td>
+                                    <td>{DateTime}</td>
+                                    <td>{Player}</td>
+                                    <td>{DateTime}</td>
+                                    <td>{Trans}</td>
+                                    <td>{Quantity}</td>
                                 </tr>
-                                <tr>
-                                    <td>10/21/2013</td>
-                                    <td>Alvin Man</td>
-                                    <td>3:20 PM</td>
-                                    <td>$234.34</td>
-                                    <td>a lot</td>
-                                </tr>
-                                <tr>
-                                    <td>3324</td>
-                                    <td>10/21/2013</td>
-                                    <td>3:03 PM</td>
-                                    <td>$724.17</td>
-                                    <td>a lot</td>
-                                </tr>
-                                <tr>
-                                    <td>3323</td>
-                                    <td>10/21/2013</td>
-                                    <td>3:00 PM</td>
-                                    <td>$23.71</td>
-                                    <td>a lot</td>
-                                </tr>
-                                <tr>
-                                    <td>3322</td>
-                                    <td>10/21/2013</td>
-                                    <td>2:49 PM</td>
-                                    <td>$8345.23</td>
-                                    <td>a lot</td>
-                                </tr>
-                                <tr>
-                                    <td>3321</td>
-                                    <td>10/21/2013</td>
-                                    <td>2:23 PM</td>
-                                    <td>$245.12</td>
-                                    <td>a lot</td>
-                                </tr>
-                                <tr>
-                                    <td>3320</td>
-                                    <td>10/21/2013</td>
-                                    <td>2:15 PM</td>
-                                    <td>$5663.54</td>
-                                    <td>a lot</td>
-                                </tr>
-                                <tr>
-                                    <td>3319</td>
-                                    <td>10/21/2013</td>
-                                    <td>2:13 PM</td>
-                                    <td>$943.45</td>
-                                    <td>a lot</td>
-                                </tr>
+                                {/SelectedStockTransactions}
                                 </tbody>
                             </table>
                         </div>

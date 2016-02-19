@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.11 - 2016-02-18 - 10:44 PM
+### Added
+- Added functions to StockModel to retrieve stock transactions and stock movements.
+- Updated homepage dashboard to include links to the Stock History page when clicking on a stock.
+
 ## 0.0.10 - 2016-02-18 - 2:00 PM
 ### Added
 - Refactored player functions from StockModel to PlayerModel.

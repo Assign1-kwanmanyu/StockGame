@@ -26,9 +26,11 @@ class StockModel extends CI_Model {
 	}
 
 	public function getMostRecentStock(){
-		//SELECT Stock, MAX(DateTime) FROM transactions
-		$this->db->select('Stock, MAX(DateTime)');
+		//SELECT * FROM transactions ORDER BY DateTime DESC Limit 1
+		$this->db->select('*');
 		$this->db->from('transactions');
+		$this->db->order_by('Datetime', 'desc');
+		$this->db->limit(1);
 		$query=$this->db->get();
 		return $query->result_array();
 	}
@@ -37,6 +39,20 @@ class StockModel extends CI_Model {
 		//SELECT * FROM transactions WHERE (Stock = 'GOLD')
 		$this->db->select('*');
 		$this->db->from('transactions');
+		$this->db->where('Stock', $stockCode);
+		$this->db->order_by('DateTime', 'desc');
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+
+	public function getSelectedStockMovement($stockCode){
+		//SELECT * FROM movements WHERE (Stock = 'GOLD')
+		$this->db->select('*');
+		$this->db->from('movements');
+		$this->db->where('Stock', $stockCode);
+		$this->db->order_by('Datetime', 'desc');
+		$query=$this->db->get();
+		return $query->result_array();
 	}
 }
 
