@@ -9,6 +9,9 @@
 //    }
 //    print_r($selectedStock);
 //
+
+    print_r($oscar);
+
 //?>
 
 

@@ -39,5 +39,25 @@ class Stock extends MY_Controller {
 		$this->render();
 	}
 
+	public function getSelectedStock($stock)
+	{
+
+//		$query = $this->StockModel->getSelectedStockTransactions($stock);
+//		$oscar = array();
+//		foreach($query->result() as $row){
+//			$oscar[] = $row;
+//		}
+
+		$oscar = $this->StockModel->getSelectedStockTransactions($stock);
+
+		$this->data['pagebody']='StockHistory';
+
+		$this->data['title'] = $stock;
+		$this->data['oscar'] = $oscar;
+
+		$this->render();
+
+	}
+
 
 }

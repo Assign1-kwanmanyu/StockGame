@@ -10,7 +10,8 @@
                         <!-- Generates the individual stocks in each row -->
 						<?php for ($col = 0; $col < count($stockInfoArray[$row]); $col++ ){ ?>
                             <div class = "col-md-3 norm">
-                                <a href="/stockhistory?selectedStock=<?php echo $stockInfoArray[$row][$col]['Code'] ?>">
+<!--                                <a href="/stockhistory?selectedStock=--><?php //echo $stockInfoArray[$row][$col]['Code'] ?><!--">-->
+                                <a href="/stockhistory/<?php echo $stockInfoArray[$row][$col]['Code']; ?>">
                                     <div class= "row">
                                         <div class = "col-md-12">
                                             <h2><?php echo $stockInfoArray[$row][$col]['Code'] ?></h2>

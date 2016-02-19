@@ -50,7 +50,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Main';
+
 $route['stockhistory'] = "Stock";
 $route['player'] = "Player";
 $route['404_override'] = '';
 //$route['translate_uri_dashes'] = FALSE;
+$route["stockhistory/(:any)"] = "Stock/getSelectedStock/$1";
+
+
+//$route["[sS]tocks"] = "Stock";
+//$route["stocks/getResult"] = "Stock/formSpecificStock";
+//$route["stocks/stocks/getResult"] = "Stock/formSpecificStock";
+//$route["[sS]tocks/(:any)"] = "Stock/getSpecificPortfolio/$1";
