@@ -20,7 +20,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>Stock <span class = "font-weight-700">History</span> |
-                    <span>Gold</span></h2>
+                    <span>Gold</span>
+                </h2>
             </div>
         </div>
         <!-- /.row -->
