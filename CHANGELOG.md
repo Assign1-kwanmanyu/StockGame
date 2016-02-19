@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.12 - 2016-02-19 - 2:27 PM
+### Added
+- Fixed bug where stock information would not load if there are no recent transactions for that stock.
+- Updated the query functions to join the stock and transaction table.
+
 ## 0.0.11 - 2016-02-18 - 10:44 PM
 ### Added
 - Added functions to StockModel to retrieve stock transactions and stock movements.

@@ -1,20 +1,3 @@
-<?php
-//    // Grabs the selected stock from the dashboard
-//    if(empty($_GET['selectedStock'])){
-//        $selectedStock = $SelectedStockTransactions[0]['Stock'];
-//        print_r("if");
-//    } else {
-//        $selectedStock = $_GET['selectedStock'];
-//        print_r("else");
-//    }
-//    print_r($selectedStock);
-//
-
-    print_r($oscar);
-
-//?>
-
-
 <div id="page-wrapper">
 
     <div class="container-fluid">
@@ -23,7 +6,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>Stock <span class = "font-weight-700">History</span> |
-                    <span>Gold</span></h2>
+                    <span><?php echo $stock[0]['Code'] ?></span></h2>
             </div>
         </div>
         <!-- /.row -->
@@ -36,7 +19,7 @@
                                 <div class="huge">132 Units</div>
                             </div>
                             <div class="col-xs-7 text-right">
-                                <div class="medium">@ $392.12</div>
+                                <div class="medium">@ $<?php echo $stock[0]['Value']?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -57,7 +40,7 @@
                                 <div class="huge">5 Units</div>
                             </div>
                             <div class="col-xs-8 text-right">
-                                <div class ="huge">@ $392.12</div>
+                                <div class ="huge">@ $<?php echo $stock[0]['Value']?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -152,7 +135,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {SelectedStockTransactions}
+                                {stock}
                                 <tr>
                                     <td>{DateTime}</td>
                                     <td>{Player}</td>
@@ -160,7 +143,7 @@
                                     <td>{Trans}</td>
                                     <td>{Quantity}</td>
                                 </tr>
-                                {/SelectedStockTransactions}
+                                {/stock}
                                 </tbody>
                             </table>
                         </div>
