@@ -105,12 +105,12 @@ if (!defined('APPPATH'))
                     <a href="/player">Player</a>
                 </li>
             </ul>
+            <ul class = "sidebar-login">
+                <li>
+                    <button class="md-trigger md-setperspective" data-modal="modal-1">Login</button>
+                </li>
+            </ul>
         </div>
-        <ul class = "sidebar-login">
-            <li>
-                <button class="md-trigger md-setperspective" data-modal="modal-1">Login</button>
-            </li>
-        </ul>
 
         <!-- Page Content -->
         {content}
