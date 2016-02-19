@@ -8,6 +8,11 @@ body {
     background-color: #36393E;
 }
 
+.background-picture {
+    color: white;
+    background: url("../img/Dark.png") ;
+}
+
 .font-weight-700 {
     font-weight: 700;
 }
@@ -21,13 +26,16 @@ body {
 
 /* */
 /* Custom Colored Panels */
-
 .huge {
     font-size: 40px;
 }
 
 .medium {
     font-size: 20px;
+}
+
+.text-green {
+    color: #5cb85c;
 }
 .panel {
     background-color: #2E3136;
