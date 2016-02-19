@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.13 - 2016-02-19 - 11:47 AM
+### Added
+- other players page with dropdown menu
+
+## 0.0.12 - 2016-02-19 - 11:00 AM
+### Added
+- Quick bug fix for login button
+- 
 ## 0.0.11 - 2016-02-18 - 10:44 PM
 ### Added
 - Added functions to StockModel to retrieve stock transactions and stock movements.
