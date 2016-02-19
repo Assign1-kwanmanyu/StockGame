@@ -362,3 +362,29 @@ h2 {
         margin-right: 0;
     }
 }
+
+.norm a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.norm a:visited {
+    color:white;
+    text-decoration: none;
+}
+
+.norm a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.norm a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.norm :hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+

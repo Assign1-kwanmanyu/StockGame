@@ -3,12 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class StockModel extends CI_Model {
 
-	public function getPlayerInfo(){
-		$this->db->select('*');
-		$this->db->from('players');
-		$query=$this->db->get();
-		return $query->result_array();
-	}
 	public function getStockInfo(){
 		$this->db->select('*');
 		$this->db->from('stocks');
@@ -29,6 +23,36 @@ class StockModel extends CI_Model {
 		$this->db->from('stocks');
 		$query=$this->db->get();
 		return $query->num_rows();
+	}
+
+	public function getMostRecentStock(){
+		//SELECT * FROM transactions ORDER BY DateTime DESC Limit 1
+		$this->db->select('*');
+		$this->db->from('transactions');
+		$this->db->order_by('Datetime', 'desc');
+		$this->db->limit(1);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+
+	public function getSelectedStockTransactions($stockCode){
+		//SELECT * FROM transactions WHERE (Stock = 'GOLD')
+		$this->db->select('*');
+		$this->db->from('transactions');
+		$this->db->where('Stock', $stockCode);
+		$this->db->order_by('DateTime', 'desc');
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+
+	public function getSelectedStockMovement($stockCode){
+		//SELECT * FROM movements WHERE (Stock = 'GOLD')
+		$this->db->select('*');
+		$this->db->from('movements');
+		$this->db->where('Stock', $stockCode);
+		$this->db->order_by('Datetime', 'desc');
+		$query=$this->db->get();
+		return $query->result_array();
 	}
 }
 

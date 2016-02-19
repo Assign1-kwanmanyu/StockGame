@@ -23,6 +23,17 @@ class Stock extends MY_Controller {
 		$this->data['pagebody']='StockHistory';
 		$ad["StockInfo"]=$this->StockModel->getStockInfo();
 		$this->data['StockInfo'] = $this->StockModel->getStockInfo();
+
+		$mostRecentStock = $this->StockModel->getMostRecentStock();
+
+		//print_r($mostRecentStock[0]['Stock']);
+
+		$this->data['SelectedStockTransactions'] = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
+
+		//$data['rawr'] = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
+		//$this->load->view('StockHistory', $data);
+		//print_r($data);
+
 		//Parse replaces templating with data
 		$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
 		$this->render();

@@ -33,6 +33,12 @@ if (!defined('APPPATH'))
 
         <script src="assets/js/modernizr.custom.js"></script>
 
+        <!-- Morris Charts CSS -->
+        <link href="assets/css/plugins/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
         <!-- Fonts -- >
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic,300italic,600italic,700italic,800italic,800' rel='stylesheet' type='text/css'>
 
@@ -70,7 +76,6 @@ if (!defined('APPPATH'))
     </div>
 
     <div id="container" class = "wrapper">
-
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -106,58 +111,9 @@ if (!defined('APPPATH'))
                 <button class="md-trigger md-setperspective" data-modal="modal-1">Login</button>
             </li>
         </ul>
-        <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="stocks-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8" style = "margin-right: 15px;">
-                        {content}
-                    </div>
-                        <div class="div-friend-list col-md-4" style = "background: #2E3136;">
-                        <h2>Online - 4</h2>
-                        <div class = "row">
-                            <div class = "col-md-12">
-                                <ul class="ul-friend-list list-unstyled">
-                                  <li class=""><img src = "assets/img/friend1.png">Thomas Yu
-                                      <ul class = "ul-friend-info list-unstyled">
-                                            <li><img src = "assets/img/icon-cash.png">$12321.33</li>
-                                            <li><img src = "assets/img/icon-stock-muney.png">$6969.12</li>
-                                        </ul>
-                                  </li>
-                                  <li class="">
-                                            <img src = "assets/img/friend3.png">Krystle Bulalakaw
-                                        <ul class = "ul-friend-info list-unstyled">
-                                            <li><img src = "assets/img/icon-cash.png">$431.69</li>
-                                            <li><img src = "assets/img/icon-stock-muney.png">$2914.69</li>
-                                        </ul> 
-                                  </li> 
-                                  <li class="">
-                                    <img src = "assets/img/friend2.png">Oscar Kwan
-                                        <ul class = "ul-friend-info list-unstyled">
-                                            <li><img src = "assets/img/icon-cash.png">$7615.06</li>
-                                            <li><img src = "assets/img/icon-stock-muney.png">$61.41</li>
-                                        </ul>
-                                    </li>
-                                <li class="">
-                                            <img src = "assets/img/friend3.png">Spenser Lee
-                                        <ul class = "ul-friend-info list-unstyled">
-                                            <li><img src = "assets/img/icon-cash.png">$431.69</li>
-                                            <li><img src = "assets/img/icon-stock-muney.png">$2914.69</li>
-                                        </ul> 
-                                  </li> 
-                                </ul>
-                            </div>
-                        </div>
-                       <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu </a> -->
-                    </div>
-                </div>
-            </div>
-            <!-- /#stocks-wrapper -->
-
-        </div>
-        <!-- /#wrapper -->
+        {content}
 
         <!-- jQuery -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
@@ -167,6 +123,11 @@ if (!defined('APPPATH'))
 
         <script src="assets/js/classie.js"></script>
         <script src="assets/js/modalEffects.js"></script>
+
+        <!-- Morris Charts JavaScript -->
+        <script src="assets/js/plugins/morris/raphael.min.js"></script>
+        <script src="assets/js/plugins/morris/morris.min.js"></script>
+        <script src="assets/js/plugins/morris/morris-data.js"></script>
 
         <!-- Menu Toggle Script -->
         <script>
