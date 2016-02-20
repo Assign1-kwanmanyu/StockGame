@@ -1,9 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+
 ## 0.2.0 - 2016-02-19 - 8:06 PM
 ### Added
 - added players link and friends menu link
+
 
 ## 0.1.9 - 2016-02-19 - 7:22 PM
 ### Added

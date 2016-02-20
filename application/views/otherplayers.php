@@ -13,9 +13,13 @@
                           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{nameinfo}
                           <span class="caret"></span></button>
                           <ul class="dropdown-menu">
+                          {allInfo}
+                          <li><a href="/player{Player}">{Player}</a></li>
+<!--                           
                             <li><a href="#">Oscar Kwan</a></li>
                             <li><a href="#">Thomas Yu</a></li>
-                            <li><a href="#">Krystle Bulalakaw</a></li>
+                            <li><a href="#">Krystle Bulalakaw</a></li> -->
+                            {/allInfo}
                           </ul>
                         </div>
                     </div>
