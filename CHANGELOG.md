@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 - added login logout system session
 - added new styling for side nav
+- new colors for modal window
 
 ## 0.1.7 - 2016-02-19 - 1:44 PM
 ### Added
