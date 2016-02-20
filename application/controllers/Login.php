@@ -25,7 +25,7 @@ class Login extends MY_Controller {
 	/* $this->session->set_userdata(array(
 									'user_id' => $_POST['usr'])); */
 
- 		$playerList = $this->PlayerModel->getPlayerInfo();
+ 		$playerList = $this->PlayerModel->getAllPlayers();
 
  		print_r($playerList);
 	   	print_r($_POST['usr']);

@@ -21,6 +21,17 @@ class Player extends MY_Controller {
 	public function index()
 	{
 		$this->data['pagebody']='Player';
+
+		$playerName = $this->session->userdata['user_id'];
+		$playerBalance = $this->PlayerModel->getPlayerInformation($playerName);
+		$this->data['playerBalance'] = $playerBalance;
+
+		$playerStocks = $this->PlayerModel->getPlayerStocks($playerName);
+		$this->data['playerStocks'] = $playerStocks;
+
+		$playerTransactions = $this->PlayerModel->getRecentPlayerTransactions($playerName);
+		$this->data['playerTransactions'] = $playerTransactions;
+
 		$this->render();
 	}
 
