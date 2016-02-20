@@ -40,6 +40,21 @@ class Player extends MY_Controller {
 			$this->render();
 		}
 	}
+	public function playerpage($name){
+		$this->data['pagebody']='otherplayers';
+		//$temp=$this->PlayerModel->getPlayerEquity('Mickey');
+		//$info['playinfo']=$name;
+		$tempeq= $this->PlayerModel->getPlayerEquity($name);
+		$this->data['nameinfo'] = $name;
+		$this->data['curcash'] = $tempeq[0]->Cash;
+		$this->data['cureq'] = $tempeq[0]->Equity;
+		//print_r($tempeq);
+		//$this->data['curequity'] = $this->PlayerModel->getPlayerEquity($name);
+		//print_r($temp);
+		//$ad["EquityInfo"]=$this->PlayerModel->getPlayerEquity();
+		$this->render();
+
+	}
 
 
 }

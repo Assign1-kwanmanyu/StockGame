@@ -38,7 +38,9 @@
 				<div class = "row">
 					<div class = "col-md-12">
 						<ul class="ul-friend-list list-unstyled">
-							<li class=""><img src = "/assets/img/friend1.png">{Player}
+							<a href="/player/{Player}">
+								<li class=""><img src = "/assets/img/friend1.png">{Player}
+							</a>
 								<ul class = "ul-friend-info list-unstyled">
 									<li><img src = "/assets/img/icon-cash.png">{Cash}</li>
 									<li><img src = "/assets/img/icon-stock-muney.png">{Cash}</li>
