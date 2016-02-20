@@ -1,17 +1,3 @@
-<?php
-//    // Grabs the selected stock from the dashboard
-//    if(empty($_GET['selectedStock'])){
-//        $selectedStock = $SelectedStockTransactions[0]['Stock'];
-//        print_r("if");
-//    } else {
-//        $selectedStock = $_GET['selectedStock'];
-//        print_r("else");
-//    }
-//    print_r($selectedStock);
-//
-//?>
-
-
 <div id="page-wrapper">
 
     <div class="container-fluid">
@@ -20,8 +6,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>Stock <span class = "font-weight-700">History</span> |
-                    <span>Gold</span>
-                </h2>
+                    <span><?php echo $stock[0]['Code'] ?></span></h2>
             </div>
         </div>
         <!-- /.row -->
@@ -34,7 +19,7 @@
                                 <div class="huge">132 Units</div>
                             </div>
                             <div class="col-xs-7 text-right">
-                                <div class="medium">@ $392.12</div>
+                                <div class="huge">@ $<?php echo $stock[0]['Value']?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -55,7 +40,7 @@
                                 <div class="huge">5 Units</div>
                             </div>
                             <div class="col-xs-8 text-right">
-                                <div class ="huge">@ $392.12</div>
+                                <div class ="huge">@ $<?php echo $stock[0]['Value']?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -93,38 +78,27 @@
                     </div>
                     <div class="panel-body">
                         <div class="list-group">
+                            <?php for ($row = 0; $row < count($movement); $row++){ ?>
                             <a href="#" class="list-group-item">
-                                <span class="badge">1234 <i class="fa fa-level-up"></i></span>
-                                lol
+                                <span class="badge"><?php echo $movement[$row]['Amount']; ?>
+                                                               <?php
+                                                               $upLabel = "<i class=\"fa fa-level-up\">";
+                                                               $divLabel = "<i class=\"fa fa-arrows-h\">";
+                                                               $downLabel = "<i class=\"fa fa-level-down\">";
+
+                                                               if($movement[$row]['Action'] == "up")
+                                                               {
+                                                                   echo $upLabel; }
+                                                               if($movement[$row]['Action'] == "down")
+                                                               {
+                                                                   echo $divLabel; }
+                                                               if($movement[$row]['Action'] == "div")
+                                                               {
+                                                                   echo  $downLabel; }
+                                                               ?> </i></span>
+                                <?php echo $movement[$row]['Datetime']; ?>
                             </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">1234 <i class="fa fa-level-down"></i></span>
-                                i am big lol
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">4141 <i class="fa fa-level-up"></i></span>
-                                I am a bigger lol
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">0.01 <i class="fa fa-level-up"></i></span>
-                                than the moon moon moon
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">0.04 <i class="fa fa-level-up"></i></span>
-                                boom boom boom even brighter
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">0.0123 <i class="fa fa-level-down"></i></span>
-                                its a firework
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">444 <i class="fa fa-level-down"></i></span>
-                                Saved the world
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">4.1 <i class="fa fa-level-down"></i></span>
-                                comn baby
-                            </a>
+                            <?php } ?>
                         </div>
                         <div class="text-right">
                             <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
@@ -150,7 +124,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {SelectedStockTransactions}
+                                {stock}
                                 <tr>
                                     <td>{DateTime}</td>
                                     <td>{Player}</td>
@@ -158,7 +132,7 @@
                                     <td>{Trans}</td>
                                     <td>{Quantity}</td>
                                 </tr>
-                                {/SelectedStockTransactions}
+                                {/stock}
                                 </tbody>
                             </table>
                         </div>

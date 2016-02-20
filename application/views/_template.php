@@ -101,7 +101,7 @@ if (!defined('APPPATH'))
                     <a href="/">Dashboard</a>
                 </li>
                 <li>
-                    <a href="/stockhistory">Stock History</a>
+                    <a href="/stockhistory/mostRecent">Stock History</a>
                 </li>
                 <li>
                     <a href="/player">Player</a>

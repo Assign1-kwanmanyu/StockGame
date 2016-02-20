@@ -26,9 +26,11 @@ class StockModel extends CI_Model {
 	}
 
 	public function getMostRecentStock(){
-		//SELECT * FROM transactions ORDER BY DateTime DESC Limit 1
+		//SELECT * FROM transactions INNER JOIN stocks ON transactions.Stock = stocks.Code ORDER BY DateTime DESC Limit 1
+
 		$this->db->select('*');
 		$this->db->from('transactions');
+		$this->db->join('stocks','stocks.Code = transactions.Stock', 'inner');
 		$this->db->order_by('Datetime', 'desc');
 		$this->db->limit(1);
 		$query=$this->db->get();
@@ -36,20 +38,23 @@ class StockModel extends CI_Model {
 	}
 
 	public function getSelectedStockTransactions($stockCode){
-		//SELECT * FROM transactions WHERE (Stock = 'GOLD')
+		//SELECT * FROM stocks LEFT JOIN transactions ON stocks.Code = transactions.Stock where stock = $stockCode
+
 		$this->db->select('*');
-		$this->db->from('transactions');
-		$this->db->where('Stock', $stockCode);
-		$this->db->order_by('DateTime', 'desc');
+		$this->db->from('stocks');
+		$this->db->join('transactions','transactions.Stock = stocks.Code', 'left');
+		$this->db->where('Code', $stockCode);
+		$this->db->order_by('Datetime', 'desc');
 		$query=$this->db->get();
 		return $query->result_array();
 	}
 
 	public function getSelectedStockMovement($stockCode){
-		//SELECT * FROM movements WHERE (Stock = 'GOLD')
+		// SELECT * FROM stocks LEFT JOIN movements ON stocks.Code = movements.Code WHERE (stocks.Code = 'GOLD')
 		$this->db->select('*');
-		$this->db->from('movements');
-		$this->db->where('Stock', $stockCode);
+		$this->db->from('stocks');
+		$this->db->join('movements','stocks.Code = movements.Code', 'inner');
+		$this->db->where('stocks.Code', $stockCode);
 		$this->db->order_by('Datetime', 'desc');
 		$query=$this->db->get();
 		return $query->result_array();

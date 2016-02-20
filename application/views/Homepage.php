@@ -10,7 +10,7 @@
                         <!-- Generates the individual stocks in each row -->
 						<?php for ($col = 0; $col < count($stockInfoArray[$row]); $col++ ){ ?>
                             <div class = "col-md-3 norm">
-                                <a href="/stockhistory?selectedStock=<?php echo $stockInfoArray[$row][$col]['Code'] ?>">
+                                <a href="/stockhistory/<?php echo $stockInfoArray[$row][$col]['Code']; ?>">
                                     <div class= "row">
                                         <div class = "col-md-12">
                                             <h2><?php echo $stockInfoArray[$row][$col]['Code'] ?></h2>
@@ -38,10 +38,10 @@
 				<div class = "row">
 					<div class = "col-md-12">
 						<ul class="ul-friend-list list-unstyled">
-							<li class=""><img src = "assets/img/friend1.png">{Player}
+							<li class=""><img src = "/assets/img/friend1.png">{Player}
 								<ul class = "ul-friend-info list-unstyled">
-									<li><img src = "assets/img/icon-cash.png">{Cash}</li>
-									<li><img src = "assets/img/icon-stock-muney.png">{Cash}</li>
+									<li><img src = "/assets/img/icon-cash.png">{Cash}</li>
+									<li><img src = "/assets/img/icon-stock-muney.png">{Cash}</li>
 								</ul>
 							</li>
 						</ul>

@@ -25,17 +25,33 @@ class Stock extends MY_Controller {
 		$this->data['StockInfo'] = $this->StockModel->getStockInfo();
 
 		$mostRecentStock = $this->StockModel->getMostRecentStock();
-
-		//print_r($mostRecentStock[0]['Stock']);
-
 		$this->data['SelectedStockTransactions'] = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
-
-		//$data['rawr'] = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
-		//$this->load->view('StockHistory', $data);
-		//print_r($data);
 
 		//Parse replaces templating with data
 		$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
+		$this->render();
+	}
+
+	public function getSelectedStock($stock)
+	{
+		$selectedStock = $this->StockModel->getSelectedStockTransactions($stock);
+		$movements = $this->StockModel->getSelectedStockMovement($stock);
+		$this->data['pagebody']='StockHistory';
+		$this->data['title'] = $stock;
+		$this->data['stock'] = $selectedStock;
+		$this->data['movement'] = $movements;
+		$this->render();
+	}
+
+	public function getMostRecentStock(){
+		$mostRecentStock = $this->StockModel->getMostRecentStock();
+		$movements = $this->StockModel->getSelectedStockMovement($mostRecentStock[0]['Stock']);
+		//$mostRecentStockTransactions = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
+		$this->data['pagebody']='StockHistory';
+		$this->data['title'] = "Most Recent Stock";
+		$this->data['stock'] = $mostRecentStock;
+		$this->data['movement'] = $movements;
+		//$this->data['stockTransactions'] = $mostRecentStockTransactions;
 		$this->render();
 	}
 

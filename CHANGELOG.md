@@ -1,28 +1,39 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## 0.1.4 - 2016-02-19 - 1:44 PM
+## 0.1.7 - 2016-02-19 - 1:44 PM
 ### Added
 - added line chart rather than area
 
-## 0.1.3 - 2016-02-19 - 11:47 AM
+## 0.1.6 - 2016-02-19 - 11:47 AM
 ### Added
 - other players page with dropdown menu
 
-## 0.1.2 - 2016-02-19 - 11:00 AM
+## 0.1.5 - 2016-02-19 - 11:00 AM
 ### Added
 - Quick bug fix for login button
 
-## 0.1.1 - 2016-02-18 - 10:44 PM
+## 0.1.4 - 2016-02-18 - 10:44 PM
 ### Added
 - Added functions to StockModel to retrieve stock transactions and stock movements.
 - Updated homepage dashboard to include links to the Stock History page when clicking on a stock.
+
+## 0.1.3 - 2016-02-19 - 4:42 PM
+### Added
+- StockHistory page complete, except the graph.  Transactions and movements implemented.
+
+## 0.1.2 - 2016-02-19 - 2:27 PM
+### Added
+- Fixed bug where stock information would not load if there are no recent transactions for that stock.
+- Updated the query functions to join the stock and transaction table.
+
+## 0.1.1 - 2016-02-18 - 10:44 PM
 
 ## 0.1.0 - 2016-02-18 - 2:00 PM
 ### Added
 - Refactored player functions from StockModel to PlayerModel.
 
-## 0.0.9 - 2016-02-18 - 1:48 PM
+## 0.0.9.1 - 2016-02-18 - 1:48 PM
 ### Added
 - Moved friends panel to Homepage view.
 
