@@ -23,17 +23,9 @@ class Main extends MY_Controller {
 		$this->data['pagebody']='Homepage';
 		$this->data['pagetitle']='Homepage';
 		$this->data['PlayerInfo']=$this->PlayerModel->getAllPlayers();
-		//$this->data['StockInfo']=$this->StockModel->getStockInfo();
 
 		$this->data['stockInfoArray']=$this->getStockArray();
 
-		////$ad["StockInfo"]=$this->StockModel->getStockInfo();
-		//Parse replaces templating with data
-		////$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
-		//$this->load->view('Homepage', $d2);
-		//$this->getPlayerInfo();
-		//$this->getStockInfo();
-		//$this->getStockInfo();
 		$this->render();	
 	}
 
@@ -61,22 +53,3 @@ class Main extends MY_Controller {
 		return $rowData;
 	}
 }
-
-
-/*
-
-
-		/*
-		$this->db->select('*');
-		$this->db->from('players');
-		//$this->db->where('Player','Mickey');
-		//var_dump($query);
-		$query=$this->db->get();
-		//$data=$query->result_array();
-		//print_r($query->result());
-		//echo($data[0]['Cash']);
-		//echo($data[1]['Cash']);
-		*/
-
-
-
