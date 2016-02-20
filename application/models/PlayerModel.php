@@ -33,6 +33,16 @@ class PlayerModel extends CI_Model {
         $query=$this->db->get();
         return $query->result_array();
     }
+
+    public function getPlayerEquity($name){
+        $this->db->select('*');
+        $this->db->from('players');
+        $this->db->where('Player', $name);
+        $query=$this->db->get();
+        $data=$query->result();
+        return $data;
+    }
+    
 }
 
 

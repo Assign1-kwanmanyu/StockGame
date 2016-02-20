@@ -53,8 +53,9 @@ $route['default_controller'] = 'Main';
 
 $route['stockhistory'] = "Stock";
 $route['player'] = "Player";
+$route['players'] = "Player/playerpage/Mickey";
 $route['404_override'] = '';
 $route['[lL]ogin/logMeIn'] = 'Login/logMeIn';
 $route["stockhistory/mostRecent"] = "Stock/getMostRecentStock";
 $route["stockhistory/(:any)"] = "Stock/getSelectedStock/$1";
-
+$route['player/*(:any)'] = 'Player/playerpage/$1';
