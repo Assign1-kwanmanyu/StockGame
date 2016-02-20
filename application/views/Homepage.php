@@ -43,7 +43,7 @@
 							</a>
 								<ul class = "ul-friend-info list-unstyled">
 									<li><img src = "/assets/img/icon-cash.png">{Cash}</li>
-									<li><img src = "/assets/img/icon-stock-muney.png">{Cash}</li>
+									<li><img src = "/assets/img/icon-stock-muney.png">{Equity}</li>
 								</ul>
 							</li>
 						</ul>

@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.2.0 - 2016-02-19 - 8:00 PM
+### Added
+-added Players page
+-added links for friends list side bar
+ 
+
+
 ## 0.1.9 - 2016-02-19 - 7:22 PM
 ### Added
 - added login logout system session
