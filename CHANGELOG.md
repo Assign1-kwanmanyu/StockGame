@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.1.9 - 2016-02-19 - 7:22 PM
+### Added
+- added login logout system session
+- added new styling for side nav
+- new colors for modal window
+
 ## 0.1.8 - 2016-02-19 - 7:16 PM
 ### Added
 - added login logout system session

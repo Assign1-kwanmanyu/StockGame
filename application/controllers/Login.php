@@ -24,7 +24,7 @@ class Login extends MY_Controller {
 
 		$player = $_POST['usr'];
 
- 		$playerList = $this->PlayerModel->getPlayerInfo();
+ 		$playerList = $this->PlayerModel->getAllPlayers();
 
 	   	foreach ($playerList as $row) {
 
