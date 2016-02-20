@@ -11,7 +11,6 @@
                     {/stock}
             </div>
         </div>
-        <!-- /.row -->
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="panel panel-green">
@@ -21,9 +20,7 @@
                                 <div class="huge">132 Units</div>
                             </div>
                             <div class="col-xs-7 text-right">
-                                {stock}
-                                <div class="huge">@ ${Value}.00</div>
-                                {/stock}
+                                <div class="huge">$<?php echo $stock[0]['Value'] ?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -44,9 +41,7 @@
                                 <div class="huge">5 Units</div>
                             </div>
                             <div class="col-xs-8 text-right">
-                                {stock}
-                                <div class ="huge">@ ${Value}.00</div>
-                                {/stock}
+                                <div class ="huge">$<?php echo $stock[0]['Value'] ?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -60,7 +55,6 @@
                 </div>
             </div>
         </div>
-        <!-- /.row -->
 
         <div class="row">
             <div class="col-lg-12">
@@ -74,7 +68,6 @@
                 </div>
             </div>
         </div>
-        <!-- /.row -->
 
         <div class="row">
             <div class="col-lg-6">
@@ -152,9 +145,6 @@
                 </div>
             </div>
         </div>
-        <!-- /.row -->
-
     </div>
-    <!-- /.container-fluid -->
 
 </div>

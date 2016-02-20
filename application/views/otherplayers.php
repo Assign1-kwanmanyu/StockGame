@@ -1,4 +1,3 @@
-
         <div id="page-wrapper">
 
             <div class="container-fluid">
@@ -14,18 +13,13 @@
                           <span class="caret"></span></button>
                           <ul class="dropdown-menu">
                           {allInfo}
-                          <li><a href="/player{Player}">{Player}</a></li>
-<!--                           
-                            <li><a href="#">Oscar Kwan</a></li>
-                            <li><a href="#">Thomas Yu</a></li>
-                            <li><a href="#">Krystle Bulalakaw</a></li> -->
-                            {/allInfo}
+                            <li><a href="/player{Player}">{Player}</a></li>
+                          {/allInfo}
                           </ul>
                         </div>
                     </div>
                 </div>
                 <br>
-                <!-- /.row -->
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="panel background-picture">
@@ -42,8 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.row -->
-                      <div class="row">
+                <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="panel background-picture">
                             <div class="panel-heading">
@@ -59,8 +52,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.row -->
             </div>
-            <!-- /.container-fluid -->
 
         

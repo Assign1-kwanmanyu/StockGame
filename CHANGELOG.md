@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.2.1 - 2016-02-19 - 8:43 PM
+### Added
+- refactored
+- added some comments
+- removed unnecessary code
+
 ## 0.2.0 - 2016-02-19 - 8:07 PM
 ### Added
 - added login logout system session
