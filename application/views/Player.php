@@ -10,7 +10,6 @@
 				<h2>Player <span class = "font-weight-700">Profile</span> | <span>{Player}</span></h2>
 			</div>
 		</div>
-		<!-- /.row -->
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
 				<div class="panel background-picture">
@@ -27,7 +26,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- /.row -->
 
 		<div class="row">
 			<div class="col-lg-12 col-md-12">
@@ -115,10 +113,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- /.row -->
 
 	</div>
-	<!-- /.container-fluid -->
 
 </div>
 
