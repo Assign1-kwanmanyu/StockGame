@@ -49,17 +49,16 @@ if (!defined('APPPATH'))
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
     </head>
 
     <body>
-    <!-- All modals added here for the demo. You would of course just have one, dynamically created -->
+
     <div class="md-modal md-effect-18" id="modal-1">
         <div class="md-content">
             <h3>Login Credientials</h3>
             <div>
                 <p>Login to your account! Don't have an account? Register here.</p>
-                <form method = "POST" action="<?php echo base_url()?>Login/sexme">
+                <form method = "POST" action="<?php echo base_url()?>Login/logMeIn">
                     <div class="form-group">
                       <label for="usr">Name:</label>
                       <input type="text" class="form-control" id="usr" name = "usr">
@@ -69,47 +68,39 @@ if (!defined('APPPATH'))
                       <input type="password" class="form-control" id="pwd">
                     </div>
                     <div class = "btn-group inline">
-                        <button type="submit">Sign in</button>
-                        <button class="md-close">Close</button>
+                        <button class="button-green" type="submit">Sign in</button>
+                        <button class="md-close button-secondary">Close</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <div id="container" class = "wrapper">
+    <div id="container" class = "wrapper main-parent">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <div class = "profile">
                     <img src="/assets/img/profile.png" class = "img-responsive avatar">
-                    <h1 id = "name-header"><?php echo $this->session->userdata['user_id']; ?></h1>
+                    <h1 id = "name-header"><?php if(!empty($this->session->userdata['user_id'])) { echo $this->session->userdata['user_id']; } else { echo "Guest"; } ?></h1>
                 </div>
                 <li>
-                    <a href="#">My Cash</a>
+                    <h2><a href="/"><i class="fa fa-tachometer"></i> Dashboard</a></h2>
                 </li>
                 <li>
-                    <a href="#">My Equity</a>
+                    <h2><a href="#"><i class="fa fa-info-circle"></i> My Stats</a></h2>
                 </li>
                 <li>
-                    <a href="#">Log Out</a>
+                    <h2><a href="/stockhistory/mostRecent"><i class="fa fa-line-chart"></i> Stock Market</a></h2>
                 </li>
                 <li>
-                    <a href="#">Settings</a>
+                    <h2><a href="/players"><i class="fa fa-users"></i> Players</a></h2>
                 </li>
                 <li>
-                    <a href="/">Dashboard</a>
+                    <h2><a href="#" class="md-trigger md-setperspective" data-modal="modal-1"><i class="fa fa-sign-in"></i> Login</a></h2>
                 </li>
                 <li>
-                    <a href="/stockhistory/mostRecent">Stock History</a>
-                </li>
-                <li>
-                    <a href="/player">Player</a>
-                </li>
-            </ul>
-            <ul class = "sidebar-login">
-                <li>
-                    <button class="md-trigger md-setperspective" data-modal="modal-1">Login</button>
+                    <h2><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></h2>
                 </li>
             </ul>
         </div>
