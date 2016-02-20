@@ -2,7 +2,7 @@
 
 $(function() {
 
-    Morris.Area({
+    /* Morris.Area({
       element: 'morris-area-chart',
       data: [
         { y: '2009', a: 100, b: 90 },
@@ -15,10 +15,10 @@ $(function() {
       ],
       xkey: 'y',
       ykeys: ['a', 'b'],
-    });
+    }); */
 
     // Donut Chart
-    Morris.Donut({
+   /* Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
             label: "Download Sales",
@@ -31,7 +31,7 @@ $(function() {
             value: 20
         }],
         resize: true
-    });
+    }); */
 
     // Line Chart
     Morris.Line({

@@ -63,7 +63,7 @@
                         <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> History Chart</h3>
                     </div>
                     <div class="panel-body">
-                        <div id="morris-area-chart"></div>
+                        <div id="morris-line-chart"></div>
                     </div>
                 </div>
             </div>
