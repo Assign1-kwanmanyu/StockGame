@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.0.13 - 2016-02-19 - 4:42 PM
+### Added
+- StockHistory page complete, except the graph.  Transactions and movements implemented.
+
 ## 0.0.12 - 2016-02-19 - 2:27 PM
 ### Added
 - Fixed bug where stock information would not load if there are no recent transactions for that stock.

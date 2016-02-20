@@ -19,7 +19,7 @@
                                 <div class="huge">132 Units</div>
                             </div>
                             <div class="col-xs-7 text-right">
-                                <div class="medium">@ $<?php echo $stock[0]['Value']?>.00</div>
+                                <div class="huge">@ $<?php echo $stock[0]['Value']?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -78,38 +78,27 @@
                     </div>
                     <div class="panel-body">
                         <div class="list-group">
+                            <?php for ($row = 0; $row < count($movement); $row++){ ?>
                             <a href="#" class="list-group-item">
-                                <span class="badge">1234 <i class="fa fa-level-up"></i></span>
-                                lol
+                                <span class="badge"><?php echo $movement[$row]['Amount']; ?>
+                                                               <?php
+                                                               $upLabel = "<i class=\"fa fa-level-up\">";
+                                                               $divLabel = "<i class=\"fa fa-arrows-h\">";
+                                                               $downLabel = "<i class=\"fa fa-level-down\">";
+
+                                                               if($movement[$row]['Action'] == "up")
+                                                               {
+                                                                   echo $upLabel; }
+                                                               if($movement[$row]['Action'] == "down")
+                                                               {
+                                                                   echo $divLabel; }
+                                                               if($movement[$row]['Action'] == "div")
+                                                               {
+                                                                   echo  $downLabel; }
+                                                               ?> </i></span>
+                                <?php echo $movement[$row]['Datetime']; ?>
                             </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">1234 <i class="fa fa-level-down"></i></span>
-                                i am big lol
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">4141 <i class="fa fa-level-up"></i></span>
-                                I am a bigger lol
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">0.01 <i class="fa fa-level-up"></i></span>
-                                than the moon moon moon
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">0.04 <i class="fa fa-level-up"></i></span>
-                                boom boom boom even brighter
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">0.0123 <i class="fa fa-level-down"></i></span>
-                                its a firework
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">444 <i class="fa fa-level-down"></i></span>
-                                Saved the world
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <span class="badge">4.1 <i class="fa fa-level-down"></i></span>
-                                comn baby
-                            </a>
+                            <?php } ?>
                         </div>
                         <div class="text-right">
                             <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>

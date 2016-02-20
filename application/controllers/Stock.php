@@ -35,20 +35,23 @@ class Stock extends MY_Controller {
 	public function getSelectedStock($stock)
 	{
 		$selectedStock = $this->StockModel->getSelectedStockTransactions($stock);
-		//print_r($selectedStock);
+		$movements = $this->StockModel->getSelectedStockMovement($stock);
 		$this->data['pagebody']='StockHistory';
 		$this->data['title'] = $stock;
 		$this->data['stock'] = $selectedStock;
+		$this->data['movement'] = $movements;
 		$this->render();
 	}
 
 	public function getMostRecentStock(){
 		$mostRecentStock = $this->StockModel->getMostRecentStock();
-		$mostRecentStockTransactions = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
+		$movements = $this->StockModel->getSelectedStockMovement($mostRecentStock[0]['Stock']);
+		//$mostRecentStockTransactions = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
 		$this->data['pagebody']='StockHistory';
 		$this->data['title'] = "Most Recent Stock";
 		$this->data['stock'] = $mostRecentStock;
-		$this->data['stockTransactions'] = $mostRecentStockTransactions;
+		$this->data['movement'] = $movements;
+		//$this->data['stockTransactions'] = $mostRecentStockTransactions;
 		$this->render();
 	}
 

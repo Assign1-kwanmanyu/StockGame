@@ -50,10 +50,11 @@ class StockModel extends CI_Model {
 	}
 
 	public function getSelectedStockMovement($stockCode){
-		//SELECT * FROM movements WHERE (Stock = 'GOLD')
+		// SELECT * FROM stocks LEFT JOIN movements ON stocks.Code = movements.Code WHERE (stocks.Code = 'GOLD')
 		$this->db->select('*');
-		$this->db->from('movements');
-		$this->db->where('Stock', $stockCode);
+		$this->db->from('stocks');
+		$this->db->join('movements','stocks.Code = movements.Code', 'inner');
+		$this->db->where('stocks.Code', $stockCode);
 		$this->db->order_by('Datetime', 'desc');
 		$query=$this->db->get();
 		return $query->result_array();
