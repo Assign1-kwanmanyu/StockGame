@@ -11,7 +11,7 @@
 						<?php for ($col = 0; $col < count($stockInfoArray[$row]); $col++ ){ ?>
                             <div class = "col-md-3 norm">
                                 <a href="/stockhistory/<?php echo $stockInfoArray[$row][$col]['Code']; ?>">
-                                    <div class= "row">
+                                    <div class= "row <?php if ($stockInfoArray[$row][$col]['Category'] == 'A') { echo 'stock-up'; } else if ($stockInfoArray[$row][$col]['Category'] == 'B') { echo 'stock-up-2'; }?>">
                                         <div class = "col-md-12">
                                             <h2><?php echo $stockInfoArray[$row][$col]['Code'] ?></h2>
                                             <span class = "span-stock-dash-subtitle"><?php echo $stockInfoArray[$row][$col]['Name'] ?></span>

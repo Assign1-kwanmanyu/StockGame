@@ -32,6 +32,21 @@ input[type="text"]
   display:  flex;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
 .norm a { 
     color: inherit; 
     text-decoration: none;
@@ -245,6 +260,9 @@ h2 {
     width: 8%;
 }
 
+.ul-friend-list a:hover {
+    opacity: 0.6;
+}
 .ul-friend-info li {
     color: #848484;
     margin-left: 40px;
@@ -332,12 +350,12 @@ h2 {
 }
 
 .sidebar-nav h2 {
-    line-height: 25px;
+    line-height: 20px;
 }
 .sidebar-nav li {
     text-align: center;
     padding: 5px;
-    line-height: 25px;
+    line-height: 20px;
 }
 
 .sidebar-nav li a {
