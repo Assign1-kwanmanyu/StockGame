@@ -61,17 +61,4 @@ class StockModel extends CI_Model {
 	}
 }
 
-		/*
-		$this->db->select('*');
-		$this->db->from('players');
-		//$this->db->where('Player','Mickey');
-		//var_dump($query);
-		$query=$this->db->get();
-		//$data=$query->result_array();
-		//print_r($query->result());
-		//echo($data[0]['Cash']);
-		//echo($data[1]['Cash']);
-		*/
-
-
 

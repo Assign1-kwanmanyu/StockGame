@@ -56,12 +56,6 @@ $route['player'] = "Player";
 $route['players'] = "Player/playerpage/Mickey";
 $route['404_override'] = '';
 $route['[lL]ogin/logMeIn'] = 'Login/logMeIn';
-//$route['translate_uri_dashes'] = FALSE;
 $route["stockhistory/mostRecent"] = "Stock/getMostRecentStock";
 $route["stockhistory/(:any)"] = "Stock/getSelectedStock/$1";
 $route['player/*(:any)'] = 'Player/playerpage/$1';
-
-//$route["[sS]tocks"] = "Stock";
-//$route["stocks/getResult"] = "Stock/formSpecificStock";
-//$route["stocks/stocks/getResult"] = "Stock/formSpecificStock";
-//$route["[sS]tocks/(:any)"] = "Stock/getSpecificPortfolio/$1";

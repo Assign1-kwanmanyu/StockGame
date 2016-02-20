@@ -6,7 +6,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>Stock <span class = "font-weight-700">History</span> |
-                    <span><?php echo $stock[0]['Code'] ?></span></h2>
+                    {stock}
+                        <span>{Code}</span></h2>
+                    {/stock}
             </div>
         </div>
         <!-- /.row -->
@@ -19,7 +21,9 @@
                                 <div class="huge">132 Units</div>
                             </div>
                             <div class="col-xs-7 text-right">
-                                <div class="huge">@ $<?php echo $stock[0]['Value']?>.00</div>
+                                {stock}
+                                <div class="huge">@ ${Value}.00</div>
+                                {/stock}
                             </div>
                         </div>
                     </div>
@@ -40,7 +44,9 @@
                                 <div class="huge">5 Units</div>
                             </div>
                             <div class="col-xs-8 text-right">
-                                <div class ="huge">@ $<?php echo $stock[0]['Value']?>.00</div>
+                                {stock}
+                                <div class ="huge">@ ${Value}.00</div>
+                                {/stock}
                             </div>
                         </div>
                     </div>
@@ -80,6 +86,9 @@
                         <div class="list-group">
                             <?php for ($row = 0; $row < count($movement); $row++){ ?>
                             <a href="#" class="list-group-item">
+
+                                <!-- We are dynamically adding the css class depending on the value,
+                                so we need to use echoes here to achieve this  -->
                                 <span class="badge"><?php echo $movement[$row]['Amount']; ?>
                                                                <?php
                                                                $upLabel = "<i class=\"fa fa-level-up\">";
@@ -96,7 +105,7 @@
                                                                {
                                                                    echo  $downLabel; }
                                                                ?> </i></span>
-                                <?php echo $movement[$row]['Datetime']; ?>
+                                {stock}{DateTime}{/stock}
                             </a>
                             <?php } ?>
                         </div>

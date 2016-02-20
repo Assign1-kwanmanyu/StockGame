@@ -4,16 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends MY_Controller {
 
 	function index() {
-		/*$player = $_POST['usr'];
-
- 		$playerList = $this->PlayerModel->getPlayerInfo();
-
-	    foreach ($playerList as $row) {
-	    	if ($row->Player == $_POST['usr']) {
-				$this->session->set_userdata('usr', $_POST['usr']);
-			}
-		}
-		print_r($this->session);*/
 		redirect('/player');
 	}
 

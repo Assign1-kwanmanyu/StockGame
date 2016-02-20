@@ -46,12 +46,10 @@ class Stock extends MY_Controller {
 	public function getMostRecentStock(){
 		$mostRecentStock = $this->StockModel->getMostRecentStock();
 		$movements = $this->StockModel->getSelectedStockMovement($mostRecentStock[0]['Stock']);
-		//$mostRecentStockTransactions = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
 		$this->data['pagebody']='StockHistory';
 		$this->data['title'] = "Most Recent Stock";
 		$this->data['stock'] = $mostRecentStock;
 		$this->data['movement'] = $movements;
-		//$this->data['stockTransactions'] = $mostRecentStockTransactions;
 		$this->render();
 	}
 
