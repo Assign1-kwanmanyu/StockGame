@@ -21,8 +21,6 @@ class Stock extends MY_Controller {
 	public function index()
 	{
 		$this->data['pagebody']='StockHistory';
-		$ad["StockInfo"]=$this->StockModel->getStockInfo();
-		$this->data['StockInfo'] = $this->StockModel->getStockInfo();
 
 		$mostRecentStock = $this->StockModel->getMostRecentStock();
 		$this->data['SelectedStockTransactions'] = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
