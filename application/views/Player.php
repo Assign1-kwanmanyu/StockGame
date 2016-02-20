@@ -1,6 +1,3 @@
-<?php
-	print_r($this->session->userdata['user_id']);
-?>
 <div id="page-wrapper">
 
 	<div class="container-fluid">
