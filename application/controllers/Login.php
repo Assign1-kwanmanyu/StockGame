@@ -17,27 +17,26 @@ class Login extends MY_Controller {
 		redirect('/player');
 	}
 
-	function sexme() {
+	function logMeIn() {
 		$this->load->library('session');
+
+		$isValidPlayer = false;
 
 		$player = $_POST['usr'];
 
-	/* $this->session->set_userdata(array(
-									'user_id' => $_POST['usr'])); */
-
  		$playerList = $this->PlayerModel->getAllPlayers();
 
- 		print_r($playerList);
-	   	print_r($_POST['usr']);
-
 	   	foreach ($playerList as $row) {
-	   			print_r($row);
-	   
-	  		 if ($row['Player'] == $player) {
-				echo 'fireworks';
+
+	  		if ($row['Player'] == $player) {
+				$isValidPlayer = true;
 				$this->session->set_userdata('user_id', $player); 
-			} 
+			} else {
+				$isValidPlayer = false;
+			}
 		} 
+
 		redirect('/');
+	
 	}
 }

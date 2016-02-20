@@ -153,7 +153,6 @@ a.list-group-item, button.list-group-item {
 
 /* Text Styles */
 #name-header {
-    margin-left: -5%;
     text-align: center;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -260,14 +259,15 @@ h2 {
 /* Toggle Styles */
 .profile {
      background: #282B30;
-     width: 175px;
+     width: 200px;
+     padding-top: 15px;
      padding-bottom: 15px;
 }
 
 .avatar {
     width: 80%;
-    margin: 10px;
-    margin-left: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* list styles */
@@ -289,10 +289,10 @@ h2 {
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 175px;
-    width: 0;
-    margin-left: -175px;
-    overflow-y: auto;
+    left: 200px;
+    width: 200px;
+    margin-left: -200px;
+    overflow-y: hidden;
     background: #2E3136;
     min-height: 100%;
     -webkit-transition: all 0.5s ease;
@@ -316,7 +316,7 @@ h2 {
 
 #wrapper.toggled #stocks-wrapper {
     position: absolute;
-    margin-right: -175px;
+    margin-right: -200px;
     background: #36393E;
 }
 
@@ -325,15 +325,19 @@ h2 {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 175px;
+    width: 200px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+.sidebar-nav h2 {
+    line-height: 25px;
+}
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+    text-align: center;
+    padding: 5px;
+    line-height: 25px;
 }
 
 .sidebar-nav li a {
@@ -345,7 +349,6 @@ h2 {
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
 }
 
 .sidebar-nav li a:active,
@@ -370,7 +373,7 @@ h2 {
 
 @media(min-width:768px) {
     .wrapper {
-        padding-left: 175px;
+        padding-left: 200px;
     }
 
     #wrapper.toggled {
@@ -378,7 +381,7 @@ h2 {
     }
 
     #sidebar-wrapper {
-        width: 175px;
+        width: 200px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
