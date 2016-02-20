@@ -1,5 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+## 0.2.2 - 2016-02-19 - 9:03 PM
+### Added
+- Final minor comment refactoring
+
 
 ## 0.2.1 - 2016-02-19 - 8:43 PM
 ### Added
