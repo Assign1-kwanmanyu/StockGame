@@ -8,6 +8,7 @@
 					<div class = "row div-stock-dash-wrapper padding-top-5">
 
                         <!-- Generates the individual stocks in each row -->
+                        <!-- Echo php statements were necessary here, due to the nature of our UI implementation. -->
 						<?php for ($col = 0; $col < count($stockInfoArray[$row]); $col++ ){ ?>
                             <div class = "col-md-3 norm">
                                 <a href="/stockhistory/<?php echo $stockInfoArray[$row][$col]['Code']; ?>">
