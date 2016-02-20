@@ -20,6 +20,12 @@ button {
 	border-radius: 2px;
 }
 
+.button-green {
+	background: #057d05;
+}
+.button-secondary {
+	background: #e84444;
+}
 
 .md-perspective,
 .md-perspective body {
@@ -41,6 +47,7 @@ button {
 .md-close {
 	content: 'x';
 }
+
 .md-modal {
 	position: fixed;
 	top: 50%;
@@ -87,7 +94,7 @@ button {
 /* Content styles */
 .md-content {
 	color: #fff;
-	background: #e74c3c;
+	background: #2C3E50;
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
