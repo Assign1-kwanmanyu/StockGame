@@ -27,6 +27,10 @@ class Main extends MY_Controller {
 		$this->data['stockInfoArray']=$this->getStockArray();
 		$this->getGameStateData();
 
+
+
+		$this->data['currentStocks']=$this->StockModel->getCurrentStocks();
+
 		$this->render();	
 	}
 

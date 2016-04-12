@@ -13,6 +13,17 @@
 
 				<div>
 					<h2>Current Stocks</h2>
+
+					//test to see if current stocks is retrieved properly:
+					<?php
+						for ($row = 1; $row < count($currentStocks); $row++){
+							for ($col = 0; $col < count($currentStocks[$row]); $col++){
+								echo $currentStocks[$row][$col];
+								echo "<br>";
+							}
+						}
+					?>
+
 					<!-- Generates the row of 4 stocks -->
 					<?php for ($row = 0; $row < count($stockInfoArray); $row++){ ?>
 						<div class = "row div-stock-dash-wrapper padding-top-5">

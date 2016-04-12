@@ -59,6 +59,23 @@ class StockModel extends CI_Model {
 		$query=$this->db->get();
 		return $query->result_array();
 	}
+
+	public function getCurrentStocks(){
+		$csvResource = fopen(DATAPATH . 'data/' . 'stocks', "r");
+
+		$csvArray = array();
+
+		$row = 0;
+		while(!feof($csvResource)){
+			$csvArray[$row++] = fgetcsv($csvResource);
+		}
+
+//		print_r($csvArray);
+		fclose($csvResource);
+
+		return $csvArray;
+	}
+
 }
 
 
