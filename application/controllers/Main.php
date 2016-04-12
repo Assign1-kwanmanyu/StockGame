@@ -25,6 +25,7 @@ class Main extends MY_Controller {
 		$this->data['PlayerInfo']=$this->PlayerModel->getAllPlayers();
 
 		$this->data['stockInfoArray']=$this->getStockArray();
+		$this->getGameStateData();
 
 		$this->render();	
 	}
@@ -51,5 +52,13 @@ class Main extends MY_Controller {
 		}
 
 		return $rowData;
+	}
+
+	public function getGameStateData(){
+		$gameData = $this->GameModel->getGameData();
+		$this->data['round'] = $gameData["round"];
+		$this->data['state'] = $gameData["state"];
+		$this->data['countdown'] = $gameData["countdown"];
+		$this->data['desc'] = $gameData["desc"];
 	}
 }
