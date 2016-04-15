@@ -40,6 +40,26 @@ class StockModel extends CI_Model {
 	public function getSelectedStockTransactions($stockCode){
 		//SELECT * FROM stocks LEFT JOIN transactions ON stocks.Code = transactions.Stock where stock = $stockCode
 
+		//get current stocks
+		$query = $this->getCurrentStocks();
+
+		//iterate through it to make sure that stock code exists
+		foreach($query as $row){
+			if($row['code'] == $stockCode){
+				echo $row['code'];
+			}
+		}
+
+		//get the stock transactions and make an array with only that stock code
+		$recentTransactions = $this->getRecentStockTransactions();
+//		foreach($recentTransactions as $row2){
+//			if($row2['stock'] == $stockCode){
+//
+//			}
+//		}
+
+
+
 		$this->db->select('*');
 		$this->db->from('stocks');
 		$this->db->join('transactions','transactions.Stock = stocks.Code', 'left');

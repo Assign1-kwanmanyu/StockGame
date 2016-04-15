@@ -22,11 +22,16 @@ class Stock extends MY_Controller {
 	{
 		$this->data['pagebody']='StockHistory';
 
-		$mostRecentStock = $this->StockModel->getMostRecentStock();
-		$this->data['SelectedStockTransactions'] = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
+		$test = $this->StockModel->getSelectedStockTransactions("GMC");
+		print_r($test);
 
-		//Parse replaces templating with data
-		$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
+
+//
+//		$mostRecentStock = $this->StockModel->getMostRecentStock();
+//		$this->data['SelectedStockTransactions'] = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
+//
+//		//Parse replaces templating with data
+//		$this->data['StockInfo']=$this->parser->parse("Anthony",$ad,true);
 		$this->render();
 	}
 
