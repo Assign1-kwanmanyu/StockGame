@@ -22,8 +22,12 @@ class Stock extends MY_Controller {
 	{
 		$this->data['pagebody']='StockHistory';
 
-		$test = $this->StockModel->getSelectedStockTransactions("GMC");
-		print_r($test);
+//		$test = $this->StockModel->getSelectedStockTransactions("DHS");
+//		$test2 = $this->StockModel->getSelectedStockMovement("IND");
+//
+//
+//
+//		print_r($test2);
 
 
 //

@@ -17,10 +17,10 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-5">
-                                <div class="huge">132 Units</div>
+                                <div class="huge">132   Units</div>
                             </div>
                             <div class="col-xs-7 text-right">
-                                <div class="huge">$<?php echo $stock[0]['Value'] ?>.00</div>
+                                <div class="huge">$<?php "test1" ?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                 <div class="huge">5 Units</div>
                             </div>
                             <div class="col-xs-8 text-right">
-                                <div class ="huge">$<?php echo $stock[0]['Value'] ?>.00</div>
+                                <div class ="huge">$<?php echo "test2" ?>.00</div>
                             </div>
                         </div>
                     </div>
@@ -79,26 +79,23 @@
                         <div class="list-group">
                             <?php for ($row = 0; $row < count($movement); $row++){ ?>
                             <a href="#" class="list-group-item">
-
-                                <!-- We are dynamically adding the css class depending on the value,
-                                so we need to use echoes here to achieve this  -->
-                                <span class="badge"><?php echo $movement[$row]['Amount']; ?>
+                                <span class="badge"><?php echo $movement[$row]['amount']; ?>
                                                                <?php
                                                                $upLabel = "<i class=\"fa fa-level-up\">";
                                                                $divLabel = "<i class=\"fa fa-arrows-h\">";
                                                                $downLabel = "<i class=\"fa fa-level-down\">";
 
-                                                               if($movement[$row]['Action'] == "up")
+                                                               if($movement[$row]['action'] == "up")
                                                                {
                                                                    echo $upLabel; }
-                                                               if($movement[$row]['Action'] == "down")
+                                                               if($movement[$row]['action'] == "down")
                                                                {
                                                                    echo $divLabel; }
-                                                               if($movement[$row]['Action'] == "div")
+                                                               if($movement[$row]['action'] == "div")
                                                                {
                                                                    echo  $downLabel; }
                                                                ?> </i></span>
-                                {stock}{DateTime}{/stock}
+                                <?php echo $movement[$row]['datetime']; ?>
                             </a>
                             <?php } ?>
                         </div>
