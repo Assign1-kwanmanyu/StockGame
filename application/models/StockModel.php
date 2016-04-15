@@ -44,11 +44,11 @@ class StockModel extends CI_Model {
 		$query = $this->getCurrentStocks();
 
 		//iterate through it to make sure that stock code exists
-		foreach($query as $row){
-			if($row['code'] == $stockCode){
-				echo $row['code'];
-			}
-		}
+//		foreach($query as $row){
+//			if($row['code'] == $stockCode){
+//				echo $row['code'];
+//			}
+//		}
 
 		$recentTransactions = $this->getRecentStockTransactions();
 //		print_r($recentMovements);
@@ -75,11 +75,11 @@ class StockModel extends CI_Model {
 		$query = $this->getCurrentStocks();
 
 		//iterate through it to make sure that stock code exists
-		foreach($query as $row){
-			if($row['code'] == $stockCode){
-				echo $row['code'];
-			}
-		}
+//		foreach($query as $row){
+//			if($row['code'] == $stockCode){
+//				echo $row['code'];
+//			}
+//		}
 
 		$recentMovements = $this->getRecentStockMovements();
 //		print_r($recentMovements);
