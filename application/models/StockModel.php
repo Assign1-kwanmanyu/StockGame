@@ -61,19 +61,24 @@ class StockModel extends CI_Model {
 	}
 
 	public function getCurrentStocks(){
-		$csvResource = fopen(DATAPATH . 'data/' . 'stocks', "r");
 
-		$csvArray = array();
+		$query = $this->ImportCSV2Array(DATAPATH . 'data/' . 'stocks', "r");
+		if($query != null)
+			return $query;
 
-		$row = 0;
-		while(!feof($csvResource)){
-			$csvArray[$row++] = fgetcsv($csvResource);
-		}
-
-//		print_r($csvArray);
-		fclose($csvResource);
-
-		return $csvArray;
+//		$csvResource = fopen(DATAPATH . 'data/' . 'stocks', "r");
+//
+//		$csvArray = array();
+//
+//		$row = 0;
+//		while(!feof($csvResource)){
+//			$csvArray[$row++] = fgetcsv($csvResource);
+//		}
+//
+////		print_r($csvArray);
+//		fclose($csvResource);
+//
+//		return $csvArray;
 	}
 
 	public function getRecentStockMovements(){
