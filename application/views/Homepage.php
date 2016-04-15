@@ -14,7 +14,6 @@
 				<div>
 					<h2>Current Stocks</h2>
 
-<!--					//test to see if current stocks is retrieved properly:-->
 					<?php for ($row = 1; $row < count($currentStocks); $row ++){ ?>
 						<div class = "row div-stock-dash-wrapper padding-top-5">
 
@@ -47,7 +46,73 @@
 				</div>
 
 				<div>
-					<h2>Recent Stock Movements</h2>
+
+					<div class="col-lg-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Stock Movements</h3>
+							</div>
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>Stock</th>
+												<th>Datetime</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+										<?php for ($row = 0; $row < 5; $row++){ ?>
+											<tr>
+												<th><?php echo $recentMovement[$row]['code']; ?></th>
+												<th><?php echo $recentMovement[$row]['datetime']; ?></th>
+												<th>
+													<span class="badge"><?php echo $recentMovement[$row]['amount']; ?>
+													<?php
+													$upLabel = "<i class=\"fa fa-level-up\">";
+													$divLabel = "<i class=\"fa fa-arrows-h\">";
+													$downLabel = "<i class=\"fa fa-level-down\">";
+
+													if($recentMovement[$row]['action'] == "up")
+													{
+														echo $upLabel; }
+													if($recentMovement[$row]['action'] == "down")
+													{
+														echo $divLabel; }
+													if($recentMovement[$row]['action'] == "div")
+													{
+														echo  $downLabel; }
+													?> </i></span>
+													</a>
+													<?php } ?></th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="text-right">
+									<a href="#">View All Movements <i class="fa fa-arrow-circle-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+<!--					<h2>Recent Stock Movements</h2>-->
+<!---->
+<!--					{recentMovement}-->
+<!--						{seq}-->
+<!--						{datetime}-->
+<!--						{code}-->
+<!--						{action}-->
+<!--						{amount}-->
+<!--					{/recentMovement}-->
+
+
+
+
+
+
 				</div>
 				<div>
 					<h2>Recent Stock Transactions</h2>

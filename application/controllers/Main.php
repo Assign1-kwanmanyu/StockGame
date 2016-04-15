@@ -30,6 +30,7 @@ class Main extends MY_Controller {
 
 
 		$this->data['currentStocks']=$this->StockModel->getCurrentStocks();
+		$this->data['recentMovement']=$this->StockModel->getRecentStockMovements();
 
 		$this->render();	
 	}
