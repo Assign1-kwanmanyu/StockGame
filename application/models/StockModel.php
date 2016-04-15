@@ -77,7 +77,15 @@ class StockModel extends CI_Model {
 	}
 
 	public function getRecentStockMovements(){
-		return $this->ImportCSV2Array(DATAPATH . 'data/' . 'movement', "r");
+		$query = $this->ImportCSV2Array(DATAPATH . 'data/' . 'movement', "r");
+		if($query != null)
+			return $query;
+	}
+
+	public function getRecentStockTransactions(){
+		$query = $this->ImportCSV2Array(DATAPATH . 'data/' . 'transactions', "r");
+		if($query != null)
+			return $query;
 	}
 
 	public function ImportCSV2Array($filename)
@@ -110,7 +118,9 @@ class StockModel extends CI_Model {
 			fclose($handle);
 		}
 
-		return $results;
+		if(isset($results)){
+			return $results;
+		}
 	}
 
 }
