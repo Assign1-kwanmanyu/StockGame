@@ -14,48 +14,36 @@
 				<div>
 					<h2>Current Stocks</h2>
 
-					//test to see if current stocks is retrieved properly:
-					<?php
-						for ($row = 1; $row < count($currentStocks); $row++){
-							for ($col = 0; $col < count($currentStocks[$row]); $col++){
-								echo $currentStocks[$row][$col];
-								echo "<br>";
-							}
-						}
-					?>
-
-					<!-- Generates the row of 4 stocks -->
-					<?php for ($row = 0; $row < count($stockInfoArray); $row++){ ?>
+<!--					//test to see if current stocks is retrieved properly:-->
+					<?php for ($row = 1; $row < count($currentStocks); $row ++){ ?>
 						<div class = "row div-stock-dash-wrapper padding-top-5">
 
-							<!-- Generates the individual stocks in each row -->
-							<!-- Echo php statements were necessary here, due to the nature of our UI implementation. -->
-							<?php for ($col = 0; $col < count($stockInfoArray[$row]); $col++ ){ ?>
+
+							<?php for ($col = 0; $col < count($currentStocks[$row]); $col++){ ?>
 								<div class = "col-md-3 norm">
-									<a href="/stockhistory/<?php echo $stockInfoArray[$row][$col]['Code']; ?>">
-										<div class= "row <?php
-										if ($stockInfoArray[$row][$col]['Category'] == 'A') { echo 'stock-up'; }
-										else if ($stockInfoArray[$row][$col]['Category'] == 'B') { echo 'stock-up-2'; }
-										else if ($stockInfoArray[$row][$col]['Category'] == 'C') { echo 'stock-down'; }?>">
-											<div class = "col-md-12">
-												<h2><?php echo $stockInfoArray[$row][$col]['Code'] ?></h2>
-												<span class = "span-stock-dash-subtitle"><?php echo $stockInfoArray[$row][$col]['Name'] ?></span>
-												<div class= "row">
-													<div class = "col-md-6">
-														<h1><?php echo $stockInfoArray[$row][$col]['Value'] ?></h1>
-													</div>
-													<div class = "col-md-6 text-right">
-														<span><?php echo $stockInfoArray[$row][$col]['Category'] ?></span>
-														<span><?php echo $stockInfoArray[$row][$col]['Value'] ?></span>
-													</div>
+									<div class= "row <?php
+									if ($currentStocks[$row][2] == 'A') { echo 'stock-up'; }
+									else if ($currentStocks[$row][2] == 'B') { echo 'stock-up-2'; }
+									else if ($currentStocks[$row][2] == 'C') { echo 'stock-down'; }?>">
+										<div class = "col-md-12">
+											<h2><?php echo $currentStocks[$row][0] ?></h2>
+											<span class = "span-stock-dash-subtitle"><?php echo $currentStocks[$row][1] ?></span>
+											<div class= "row">
+												<div class = "col-md-6">
+													<h1><?php echo $currentStocks[$row][3] ?></h1>
+												</div>
+												<div class = "col-md-6 text-right">
+													<span><?php echo $currentStocks[$row][2] ?></span>
+													<span><?php echo $currentStocks[$row][3] ?></span>
 												</div>
 											</div>
 										</div>
-									</a>
+									</div>
 								</div>
 							<?php } ?>
 						</div>
 					<?php } ?>
+
 				</div>
 
 				<div>
