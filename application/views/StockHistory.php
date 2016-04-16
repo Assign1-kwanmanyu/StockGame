@@ -24,7 +24,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="/Main/buyStocks">
                         <div class="panel-footer">
                             <span class="pull-left">Purchase Stocks</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="/Main/sellStocks">
                         <div class="panel-footer">
                             <span class="pull-left">Sell Stocks</span>
                             <span class="pull-right"><i class="fa fa-undo"></i></span>

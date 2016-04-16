@@ -14,6 +14,22 @@ class GameModel extends CI_Model {
 
         return $gameState;
     }
+/*
+    public function getActiveStocks(){
+
+        $xml = simplexml_load_file(DATAPATH . 'data/stocks');
+
+        $activeStocks = array();
+        $activeStocks['code'] = (string) $xml->code;
+        $gameState['desc'] = (string) $xml->desc;
+
+        return $gameState;
+
+    }
+*/
+
+
+
 }
 
 
