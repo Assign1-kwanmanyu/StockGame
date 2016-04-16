@@ -41,7 +41,7 @@ class GameModel extends CI_Model {
 		*/
 
 
-		$url = "http://bsx.jlparry.com/data/stocks";
+		$url = DATAPATH . 'data/' . 'stocks';
 		$csv = file_get_contents($url);
 		$csvData = file_get_contents($csv);
 		$lines = explode(PHP_EOL, $csvData);
