@@ -59,3 +59,6 @@ $route['[lL]ogin/logMeIn'] = 'Login/logMeIn';
 $route["stockhistory/mostRecent"] = "Stock/getMostRecentStock";
 $route["stockhistory/(:any)"] = "Stock/getSelectedStock/$1";
 $route['player/*(:any)'] = 'Player/playerpage/$1';
+
+$route["register"] = "Register";
+$route["register/try"] = "Register/runThis";

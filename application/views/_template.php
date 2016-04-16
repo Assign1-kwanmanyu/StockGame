@@ -53,22 +53,55 @@ if (!defined('APPPATH'))
 
     <body>
 
+    <!-- Login Modal -->
     <div class="md-modal md-effect-18" id="modal-1">
         <div class="md-content">
             <h3>Login Credientials</h3>
             <div>
-                <p>Login to your account! Don't have an account? Register here.</p>
+                <p>Login to your account! Don't have an account? <button type="button" class="md-close btn btn-link md-trigger md-setperspective" data-modal="modal-2" style="color: white">Register here.</button>
+                </p>
                 <form method = "POST" action="<?php echo base_url()?>Login/logMeIn">
                     <div class="form-group">
-                      <label for="usr">Name:</label>
-                      <input type="text" class="form-control" id="usr" name = "usr">
+                        <label for="usr">Name:</label>
+                        <input type="text" class="form-control" id="usr" name = "usr">
                     </div>
                     <div class="form-group">
-                      <label for="pwd">Password:</label>
-                      <input type="password" class="form-control" id="pwd">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd" name = "password">
                     </div>
                     <div class = "btn-group inline">
                         <button class="button-green" type="submit">Sign in</button>
+                        <button class="md-close button-secondary">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register modal -->
+    <div class="md-modal md-effect-18" id="modal-2">
+        <div class="md-content">
+            <h3>Register</h3>
+            <div>
+                <p>Awesome, thank you for loving our Stock Game. Fill in the details below to sign up.</p>
+                <p>{errorMsg}</p>
+                <form method = "POST" action="<?php echo base_url()?>Register/runThis">
+                    <div class="form-group">
+                        <label for="usr">Username:</label>
+                        <input type="text" class="form-control" id="usr" name = "usr">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" name ="pwd" placeholder="Make a secure password please" class="form-control" id="pwd">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPwd">Confirm password:</label>
+                        <input type="password" name = "confirmPwd" placeholder="Confirm it!" class="form-control" id="confirmPwd">
+                    </div>
+                    <button class="btn-info">Upload an Avatar</button>
+                    <br><br>
+                    <div class = "btn-group inline">
+                        <button class="button-green" type="submit">Register</button>
                         <button class="md-close button-secondary">Close</button>
                     </div>
                 </form>
@@ -83,7 +116,7 @@ if (!defined('APPPATH'))
                 <div class = "profile">
                     <img src="/assets/img/profile.png" class = "img-responsive avatar">
                     <h1 id = "name-header"><?php if(!empty($this->session->userdata['user_id'])) { echo $this->session->userdata['user_id']; } else { echo "Guest"; } ?></h1>
-                </div>
+                </div>  
                 <li>
                     <h2><a href="/"><i class="fa fa-tachometer"></i> Dashboard</a></h2>
                 </li>

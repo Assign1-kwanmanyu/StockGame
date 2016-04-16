@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-define('DATAPATH', 'http://bsx.jlparry.com/');
+define('DATAPATH', 'http://www.comp4711bsx.local/');
 
 /*
 |--------------------------------------------------------------------------

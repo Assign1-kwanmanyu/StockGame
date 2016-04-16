@@ -123,7 +123,7 @@
 									<table class="table table-bordered">
 										<thead>
 										<tr>
-											<th>Stock</th>
+											<th>Sequence</th>
 											<th>Datetime</th>
 											<th>Agent</th>
 											<th>Player</th>
@@ -135,7 +135,7 @@
 										<tbody>
 										<?php for ($row = 0; $row < 5; $row++){ ?>
 											<tr>
-												<th><?php echo $recentTransactions[$row]['code']; ?></th>
+												<th><?php echo $recentTransactions[$row]['seq']; ?></th>
 												<th><?php echo $recentTransactions[$row]['datetime']; ?></th>
 												<th><?php echo $recentTransactions[$row]['agent']; ?></th>
 												<th><?php echo $recentTransactions[$row]['player']; ?></th>
