@@ -44,40 +44,56 @@ class StockModel extends CI_Model {
 		$query = $this->getCurrentStocks();
 
 		//iterate through it to make sure that stock code exists
-		foreach($query as $row){
-			if($row['code'] == $stockCode){
-				echo $row['code'];
-			}
-		}
-
-		//get the stock transactions and make an array with only that stock code
-		$recentTransactions = $this->getRecentStockTransactions();
-//		foreach($recentTransactions as $row2){
-//			if($row2['stock'] == $stockCode){
-//
+//		foreach($query as $row){
+//			if($row['code'] == $stockCode){
+//				echo $row['code'];
 //			}
 //		}
 
+		$recentTransactions = $this->getRecentStockTransactions();
+//		print_r($recentMovements);
 
+		$recentTransactionArray = array();
 
-		$this->db->select('*');
-		$this->db->from('stocks');
-		$this->db->join('transactions','transactions.Stock = stocks.Code', 'left');
-		$this->db->where('Code', $stockCode);
-		$this->db->order_by('Datetime', 'desc');
-		$query=$this->db->get();
-		return $query->result_array();
+		if(isset($recentTransactions)){
+			foreach($recentTransactions as $row){
+				if($row['stock'] == $stockCode){
+					array_push($recentTransactionArray, $row);
+				}
+			}
+		} else {
+			return array();
+		}
+
+//		print_r($recentTransactionArray);
+		return $recentTransactionArray;
 	}
 
 	public function getSelectedStockMovement($stockCode){
-		// SELECT * FROM stocks LEFT JOIN movements ON stocks.Code = movements.Code WHERE (stocks.Code = 'GOLD')
-		$this->db->select('*');
-		$this->db->from('stocks');
-		$this->db->join('movements','stocks.Code = movements.Code', 'inner');
-		$this->db->where('stocks.Code', $stockCode);
-		$this->db->order_by('Datetime', 'desc');
-		$query=$this->db->get();
-		return $query->result_array();
+
+		//get current stocks
+		$query = $this->getCurrentStocks();
+
+		//iterate through it to make sure that stock code exists
+//		foreach($query as $row){
+//			if($row['code'] == $stockCode){
+//				echo $row['code'];
+//			}
+//		}
+
+		$recentMovements = $this->getRecentStockMovements();
+//		print_r($recentMovements);
+
+		$recentMovementArray = array();
+
+		foreach($recentMovements as $row){
+			if($row['code'] == $stockCode){
+				array_push($recentMovementArray, $row);
+			}
+		}
+
+//		print_r($recentMovementArray);
+		return $recentMovementArray;
 	}
 
 	public function getCurrentStocks(){

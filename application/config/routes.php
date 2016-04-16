@@ -62,3 +62,4 @@ $route['player/*(:any)'] = 'Player/playerpage/$1';
 
 $route["register"] = "Register";
 $route["register/try"] = "Register/runThis";
+$route['gameplay'] = "Gameplay";

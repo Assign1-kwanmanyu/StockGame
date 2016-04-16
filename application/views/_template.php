@@ -121,6 +121,9 @@ if (!defined('APPPATH'))
                     <h2><a href="/"><i class="fa fa-tachometer"></i> Dashboard</a></h2>
                 </li>
                 <li>
+                    <h2><a href="/gameplay"><i class="fa fa-tachometer"></i> Gameplay</a></h2>
+                </li>
+                <li>
                     <h2><a href="/player"><i class="fa fa-info-circle"></i> My Stats</a></h2>
                 </li>
                 <li>
