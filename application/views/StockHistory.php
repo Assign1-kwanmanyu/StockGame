@@ -5,10 +5,7 @@
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h2>Stock <span class = "font-weight-700">History</span> |
-                    {stock}
-                        <span>{Code}</span></h2>
-                    {/stock}
+                <h2>Stock History | <span class = "font-weight-700">{title}</span></h2>
             </div>
         </div>
 
@@ -130,7 +127,7 @@
                                                                {
                                                                    echo  $downLabel; }
                                                                ?> </i></span>
-                                <?php echo $movement[$row]['datetime']; ?>
+                                <?php echo date('Y-m-d h:i:s', $movement[$row]['datetime']); ?>
                             </a>
                             <?php } ?>
                         </div>

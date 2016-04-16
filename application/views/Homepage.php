@@ -102,7 +102,7 @@
 										<?php for ($row = 0; $row < 5; $row++){ ?>
 											<tr>
 												<th><?php echo $recentMovement[$row]['code']; ?></th>
-												<th><?php echo $recentMovement[$row]['datetime']; ?></th>
+												<th><?php echo date('Y-m-d h:i:s', $recentMovement[$row]['datetime']); ?></th>
 												<th>
 													<span class="badge"><?php echo $recentMovement[$row]['amount']; ?>
 													<?php
