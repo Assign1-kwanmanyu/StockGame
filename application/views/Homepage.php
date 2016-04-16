@@ -3,12 +3,35 @@
 		<div class="row">
 			<div class="col-md-8" style = "margin-right: 15px;">
 
-				<div>
-					<h2>Game Summary</h2>
-					<ul>
-						<li>Round: {round}</li>
-						<li>Status: {desc}</li>
-					</ul>
+				<div class="row">
+
+					<div class="col-lg-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Game Summary</h3>
+							</div>
+							<div class="panel-body">
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead>
+										<tr>
+											<th>Round</th>
+											<th>Status</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<th>{round}</th>
+											<th>{desc}</th>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="text-right">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div>
@@ -79,7 +102,7 @@
 										<?php for ($row = 0; $row < 5; $row++){ ?>
 											<tr>
 												<th><?php echo $recentMovement[$row]['code']; ?></th>
-												<th><?php echo $recentMovement[$row]['datetime']; ?></th>
+												<th><?php echo date('Y-m-d h:i:s', $recentMovement[$row]['datetime']); ?></th>
 												<th>
 													<span class="badge"><?php echo $recentMovement[$row]['amount']; ?>
 													<?php

@@ -127,7 +127,7 @@ if (!defined('APPPATH'))
                     <h2><a href="/player"><i class="fa fa-info-circle"></i> My Stats</a></h2>
                 </li>
                 <li>
-                    <h2><a href="/stockhistory/mostRecent"><i class="fa fa-line-chart"></i> Stock Market</a></h2>
+                    <h2><a href="/stocks"><i class="fa fa-line-chart"></i> Stock Market</a></h2>
                 </li>
                 <li>
                     <h2><a href="/players"><i class="fa fa-users"></i> Players</a></h2>
