@@ -33,7 +33,10 @@ class MY_Controller extends CI_Controller {
 	 */
 	function render()
 	{
+		$this->data['sessionid'] = session_id();
+
 		$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
+
 
 		// finally, build the browser page!
 		$this->data['data'] = &$this->data;

@@ -8,23 +8,35 @@ class Login extends MY_Controller {
 	}
 
 	function logMeIn() {
+		$this->load->model("UserModel");
 		$this->load->library('session');
 
 		$isValidPlayer = false;
 
 		$player = $_POST['usr'];
+		$pwd = $_POST['password'];
 
- 		$playerList = $this->PlayerModel->getAllPlayers();
+ 		$playerList = $this->UserModel->getAllUsers();
 
-	   	foreach ($playerList as $row) {
+	   	foreach ($playerList->result() as $row) {
+			//debug_to_console($row->name);
 
-	  		if ($row['Player'] == $player) {
+	  		if ($row->name == $player && password_verify($pwd, $row->password)) {
+				echo "worked";
 				$isValidPlayer = true;
-				$this->session->set_userdata('user_id', $player); 
 			} else {
+				echo "didn't work";
 				$isValidPlayer = false;
 			}
 		} 
+
+		if ($isValidPlayer) {
+			echo "PELASE WORK";
+			$this->session->set_userdata('user_id', $player);
+		} else {
+			echo "i am a failure";
+		//	redirect('/bye');
+		}
 
 		redirect('/');
 	
