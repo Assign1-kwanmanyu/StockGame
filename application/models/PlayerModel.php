@@ -5,15 +5,10 @@ class PlayerModel extends CI_Model {
 
     public function getAllPlayers(){
         $this->db->select('*');
-        $this->db->from('players');
-        $query=$this->db->get();
-        return $query->result_array();
-    }
-
-    public function getActivePlayersWithMoney(){
-        $this->db->select('*');
         $this->db->from('users');
         $this->db->join('players', 'players.Player = users.name');
+        $query=$this->db->get();
+        return $query->result_array();
     }
 
     public function getPlayerInformation($playerName){
