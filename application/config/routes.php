@@ -58,5 +58,7 @@ $route['404_override'] = '';
 $route['[lL]ogin/logMeIn'] = 'Login/logMeIn';
 $route["stockhistory/mostRecent"] = "Stock/getMostRecentStock";
 $route["stockhistory/(:any)"] = "Stock/getSelectedStock/$1";
+$route["Stock/*(:any)"]= "Main/buyStocks/$1";
+$route["Stocksell/*(:any)"]= "Main/sellStocks/$1";
 $route['player/*(:any)'] = 'Player/playerpage/$1';
 $route['gameplay'] = "Gameplay";
