@@ -28,8 +28,11 @@ class Stock extends MY_Controller {
 //
 //
 //		print_r($test2);
-
-
+/*
+		$activestocks= $this->GameModel->getActiveStocks();
+		var_dump($activestocks);
+		echo "test";
+		*/
 //
 //		$mostRecentStock = $this->StockModel->getMostRecentStock();
 //		$this->data['SelectedStockTransactions'] = $this->StockModel->getSelectedStockTransactions($mostRecentStock[0]['Stock']);
