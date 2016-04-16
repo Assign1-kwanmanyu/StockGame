@@ -29,6 +29,7 @@ class Main extends MY_Controller {
 
 
 
+
 		$this->data['currentStocks']=$this->StockModel->getCurrentStocks();
 
 //		print_r($this->StockModel->getCurrentStocks());
@@ -73,7 +74,7 @@ class Main extends MY_Controller {
 
 	public function buyStocks($stockName){
 		//echo $stockName;
-		$url = 'http://bsx.jlparry.com/buy';
+		$url = DATAPATH . 'buy/';
 		$data = array('team' => 'o01',
 					'token' => '6d22afe5483048ec4ea99fb6738cec6e',
 					'player' => 'Donald',
@@ -123,7 +124,7 @@ class Main extends MY_Controller {
 	public function sellStocks($stockName){
 
 		
-		$url = 'http://bsx.jlparry.com/sell';
+		$url = DATAPATH . 'sell/';
 		$data = array('team' => 'o01',
 					'token' => '6d22afe5483048ec4ea99fb6738cec6e',
 					'player' => 'Donald',
