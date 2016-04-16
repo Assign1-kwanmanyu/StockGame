@@ -11,6 +11,41 @@
                     {/stock}
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <h2>Select an Active stock to purchase -></h2>
+            </div>
+            <div class="col-lg-9">
+                <div class="dropdown" style = "margin-top: 10px;    ">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Purchase Active Stocks
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                  {actStocks}
+                    <li><a href="/Stock{code}">{code}</a></li>
+                  {/actStocks}
+                  </ul>
+                </div>
+            </div>
+        </div>
+        </br>
+                <div class="row">
+            <div class="col-lg-3">
+                <h2>Select an Active stock to Sell -></h2>
+            </div>
+            <div class="col-lg-9">
+                <div class="dropdown" style = "margin-top: 10px;    ">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sell Active Stocks
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                  {actStocks}
+                    <li><a href="/Stocksell{code}">{code}</a></li>
+                  {/actStocks}
+                  </ul>
+                </div>
+            </div>
+        </div>
+        </br>
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="panel panel-green">

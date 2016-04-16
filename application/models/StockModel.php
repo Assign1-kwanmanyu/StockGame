@@ -98,7 +98,7 @@ class StockModel extends CI_Model {
 
 	public function getCurrentStocks(){
 
-		$query = $this->ImportCSV2Array(DATAPATH . 'data/' . 'stocks', "r");
+		$query = $this->ImportCSV2Array("http://bsx.jlparry.com/". 'data/' . 'stocks', "r");
 		if($query != null)
 			return $query;
 
