@@ -45,10 +45,12 @@ class StockHistory extends MY_Controller {
 	public function getSelectedStock($stock)
 	{
 		$selectedStock = $this->StockModel->getSelectedStockTransactions($stock);
+		$activestocks= $this->StockModel->getCurrentStocks();
 		$movements = $this->StockModel->getSelectedStockMovement($stock);
 		$this->data['pagebody']='StockHistory';
 		$this->data['title'] = $stock;
 		$this->data['stock'] = $selectedStock;
+		$this->data['actStocks'] = $activestocks;
 		$this->data['movement'] = $movements;
 		$this->render();
 	}

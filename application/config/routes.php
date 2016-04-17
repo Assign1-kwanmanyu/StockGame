@@ -67,3 +67,4 @@ $route["register/try"] = "Register/runThis";
 $route['gameplay'] = "Gameplay";
 
 $route['stocks'] = "Stocks";
+$route['stocks/register'] = "Stocks/getAgentToken";

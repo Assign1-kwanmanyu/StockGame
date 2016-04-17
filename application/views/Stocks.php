@@ -5,6 +5,8 @@
         <div>
             <h2>Active Stocks</h2>
 
+            <a href="/stocks/register">Register!</a>
+
             <?php $counter = 0; ?>
             <div class = "row div-stock-dash-wrapper padding-top-5">
                 <?php for ($row = 1; $row < count($currentStocks); $row ++){?>

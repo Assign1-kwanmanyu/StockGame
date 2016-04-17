@@ -22,6 +22,9 @@ class Gameplay extends MY_Controller {
     {
         $this->data['pagebody'] = 'Gameplay';
 
+        $this->data['currentStocks']=$this->StockModel->getCurrentStocks();
+        $activestocks= $this->StockModel->getCurrentStocks();
+        $this->data['actStocks'] = $activestocks;
         $gameData = $this->GameModel->getGameData();
         $this->data['round'] = $gameData["round"];
         $this->data['state'] = $gameData["state"];
