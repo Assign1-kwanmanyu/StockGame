@@ -1,0 +1,417 @@
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    background-color: #36393E;
+}
+
+input[type="text"]
+{
+    font-size:24px;
+}
+
+.form-control {
+    line-height: 28px;
+}
+.background-picture {
+    color: white;
+    background: url("../img/Dark.png") ;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:  flex;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.norm a { 
+    color: inherit; 
+    text-decoration: none;
+} 
+
+.norm a:visited {
+    color:white;
+    text-decoration: none;
+}
+
+.norm a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.norm a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.norm :hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+/* */
+/* Custom Colored Panels */
+.huge {
+    font-size: 40px;
+}
+
+.medium {
+    font-size: 20px;
+}
+
+.text-green {
+    color: #5cb85c;
+}
+.panel {
+    background-color: #2E3136;
+    border-color: black;
+}
+
+.panel-footer {
+    background-color: transparent;
+    border-top: none;
+}
+
+.table-hover > tbody > tr:hover {
+}
+
+a.list-group-item, button.list-group-item {
+    color: white;
+}
+.list-group-item {
+    background-color: #2E3136;
+}
+.panel-body {
+    color: white;
+}
+
+.panel-default > .panel-heading {
+    color: white;
+    background-color: #25272b;
+    border-color: black;
+}
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green > .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green > a {
+    color: #5cb85c;
+}
+
+.panel-green > a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red > .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red > a {
+    color: #d9534f;
+}
+
+.panel-red > a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow > .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow > a {
+    color: #f0ad4e;
+}
+
+.panel-yellow > a:hover {
+    color: #df8a13;
+}
+
+/* Text Styles */
+#name-header {
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 100%;
+    color: white;
+}
+
+/* */
+.fa-level-up {
+    color: #23c6c8;
+}
+
+.fa-level-down {
+    color: #c62e0f;
+}
+
+.sidebar-login {
+    position: absolute;
+    z-index: 2500;
+    left: -25px;
+    bottom: 0px;
+}
+
+/* */
+.padding-top-5 {
+   padding-top: 5px;
+}
+
+.span-stock-dash-subtitle {
+    font-size: 0.8em;
+}
+.stock-up {
+   background: #0F5425;
+}
+
+.stock-up-2 {
+   background: #167234;
+}
+
+.stock-down {
+    background: #185375;
+}
+
+.stock-down-2 {
+    background: #751100;
+}
+
+.div-stock-dash-wrapper h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: white;
+}
+
+.div-stock-dash-wrapper h2 {
+    opacity: 0.5;
+}
+.div-stock-dash-wrapper .norm {
+    margin-left: 5px;
+    background: #1E2124;
+}
+/* */
+
+.div-friend-list {
+    padding-left: 15px;
+    /*height: 500px;*/
+}
+
+.div-friend-list h2 {
+    height: 35px;
+}
+.ul-friend-list {
+    margin-left: 10px;
+}
+
+.ul-friend-list li {
+    color: white;
+    height: 100px;
+}
+
+.ul-friend-list img {
+    margin-right: 10px;
+    width: 8%;
+}
+
+.ul-friend-list a:hover {
+    opacity: 0.6;
+}
+.ul-friend-info li {
+    color: #848484;
+    margin-left: 40px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.ul-friend-info img {
+    vertical-align: middle;
+    width: 5%;
+}
+/* Toggle Styles */
+.profile {
+     background: #282B30;
+     width: 200px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+}
+
+.avatar {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* list styles */
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 200px;
+    width: 200px;
+    margin-left: -200px;
+    overflow-y: hidden;
+    background: #2E3136;
+    min-height: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 175px;
+}
+
+#stocks-wrapper {
+    margin: 0;
+    height: 100%;
+    position: absolute;
+    padding: 15px;
+    color: white;
+    background: #36393E;
+}
+
+#wrapper.toggled #stocks-wrapper {
+    position: absolute;
+    margin-right: -200px;
+    background: #36393E;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav h2 {
+    line-height: 20px;
+}
+.sidebar-nav li {
+    text-align: center;
+    padding: 5px;
+    line-height: 20px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    .wrapper {
+        padding-left: 200px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 200px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #stocks-wrapper {
+        padding: 20px;
+    }
+
+    #wrapper.toggled #stocks-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
